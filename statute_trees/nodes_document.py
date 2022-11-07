@@ -39,12 +39,7 @@ class DocUnit(Node, TreeishNode):
             sources = u.pop("sources", None)
             if subunits := u.pop("units", None):  # potential children
                 children = list(cls.create_branches(subunits, id))  # recursive
-            yield DocUnit(
-                **u,
-                id=id,
-                sources=sources,
-                units=children,
-            )
+            yield DocUnit(**u, id=id, sources=sources, units=children)
 
     @classmethod
     def searchables(cls, pk: str, units: list["DocUnit"]):

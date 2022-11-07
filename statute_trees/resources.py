@@ -15,7 +15,7 @@ from pydantic import (
     validator,
 )
 from slugify import slugify
-from statute_patterns import StatuteSerialCategory, extract_rule
+from statute_patterns import Rule, StatuteSerialCategory, extract_rule
 
 """
 Note: The fields are marked with col and index for future use by the sqlpyd library.
@@ -195,6 +195,10 @@ class StatuteBase(BaseModel):
     @validator("statute_serial_id", pre=True)
     def serial_id_lower(cls, v):
         return v.lower() if v else None
+
+    @classmethod
+    def from_rule(cls, r: Rule):
+        return cls(statute_category=r.cat, statute_serial_id=r.id)
 
 
 class EventStatute(StatuteBase):

@@ -1,10 +1,17 @@
 import json
+from pathlib import Path
 from typing import Iterator
 
 from pydantic import Field
+from statute_patterns import (
+    Rule,
+    StatuteDetails,
+    StatuteTitle,
+    StatuteTitleCategory,
+)
 
 from .markup import create_tree
-from .resources import Node, Tree, TreeishNode, generic_mp
+from .resources import Node, Page, Tree, TreeishNode, generic_mp
 from .utils import has_short_title
 
 
@@ -97,7 +104,8 @@ class StatuteUnit(Node, TreeishNode):
                 yield from cls.extract_titles(node.units)
 
     @classmethod
-    def get_first_title(cls, nodes: list["StatuteUnit"]) -> str | None:
+    def get_short(cls, nodes: list["StatuteUnit"]) -> str | None:
+        """Get the first short title found."""
         titles = cls.extract_titles(nodes)
         title_list = list(titles)
         if title_list:
@@ -106,4 +114,36 @@ class StatuteUnit(Node, TreeishNode):
 
 
 class StatuteStructure(Tree):
-    tree: list["StatuteUnit"] = Field(exclude=True)
+    tree: list[StatuteUnit]
+
+
+class StatutePage(Page):
+    titles: list[StatuteTitle]
+
+    @classmethod
+    def build(cls, details_path: Path):
+        r = Rule.from_path(details_path)
+        if not r:
+            return "No rule found on path."
+
+        details = StatuteDetails.from_rule(r, details_path.parent)
+        if not details:
+            return "No details from rule."
+
+        extracted_data = details.dict(exclude={"units"})
+        tree_data = StatuteUnit.tree_setup(
+            data={"units": details.units},
+            title=details.title,
+            pk=details.id,
+        )
+        if not tree_data:
+            return "No tree data from details."
+
+        if text := StatuteUnit.get_short(tree_data.tree):
+            short = StatuteTitle(
+                statute_id=details.id,
+                category=StatuteTitleCategory.Short,
+                text=text,
+            )
+            extracted_data["titles"].append(short.dict())
+        return cls(**extracted_data, **tree_data.dict(exclude={"tree"}))

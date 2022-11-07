@@ -15,5 +15,5 @@ def titled_obj(shared_datadir) -> dict:
 def test_title_set(titled_obj):
     title = "The Judiciary Reorganization Act of 1980"
     objects = list(StatuteUnit.create_branches(titled_obj["units"]))
-    matched = StatuteUnit.get_first_title(objects)
+    matched = StatuteUnit.get_short(objects)
     assert matched == title

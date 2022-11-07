@@ -607,8 +607,8 @@ test = ["ipykernel", "pre-commit", "pytest", "pytest-cov", "pytest-timeout"]
 
 [[package]]
 name = "jupyter-server"
-version = "1.21.0"
-description = "The backend—i.e. core services, APIs, and REST endpoints—to Jupyter web applications."
+version = "1.23.0"
+description = "=?utf-8?q?The_backend=E2=80=94i=2Ee=2E_core_services=2C_APIs=2C_and_REST_endpoints=E2=80=94to_Jupyter_web_applications=2E?="
 category = "dev"
 optional = false
 python-versions = ">=3.7"
@@ -1339,7 +1339,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.5"
+version = "0.0.6"
 description = "Philippine statutory law pattern matching library."
 category = "main"
 optional = false
@@ -1523,7 +1523,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "70f8f7774086da594b7dd4c6de7aab53d4975709116cc140319fc3dc6963aa42"
+content-hash = "d454a1b7769361e6f3665a462daca335eab8f35f8a7941f6a89a9e86929b8f8d"
 
 [metadata.files]
 anyio = [
@@ -1876,8 +1876,8 @@ jupyter-core = [
     {file = "jupyter_core-4.11.2.tar.gz", hash = "sha256:c2909b9bc7dca75560a6c5ae78c34fd305ede31cd864da3c0d0bb2ed89aa9337"},
 ]
 jupyter-server = [
-    {file = "jupyter_server-1.21.0-py3-none-any.whl", hash = "sha256:992531008544d77e05a16251cdfbd0bdff1b1efa14760c79b9cc776ac9214cf1"},
-    {file = "jupyter_server-1.21.0.tar.gz", hash = "sha256:d0adca19913a3763359be7f0b8c2ea8bfde356f4b8edd8e3149d7d0fbfaa248b"},
+    {file = "jupyter_server-1.23.0-py3-none-any.whl", hash = "sha256:0adbb94fc41bc5d7217a17c51003fea7d0defb87d8a6aff4b95fa45fa029e129"},
+    {file = "jupyter_server-1.23.0.tar.gz", hash = "sha256:45d706e049ca2486491b1bb459c04f34966a606018be5b16287c91e33689e359"},
 ]
 jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.2.2-py2.py3-none-any.whl", hash = "sha256:2405800db07c9f770863bcf8049a529c3dd4d3e28536638bd7c1c01d2748309f"},
@@ -2378,8 +2378,8 @@ stack-data = [
     {file = "stack_data-0.6.0.tar.gz", hash = "sha256:8e515439f818efaa251036af72d89e4026e2b03993f3453c000b200fb4f2d6aa"},
 ]
 statute-patterns = [
-    {file = "statute_patterns-0.0.5-py3-none-any.whl", hash = "sha256:72b06565e30d4de79cb730812fb101875ee0696953bf52a03984cf7f0a1dbe53"},
-    {file = "statute_patterns-0.0.5.tar.gz", hash = "sha256:07b4962728cbdc8b1578c844605a5334ace7a2ef5fa30d9d43df203f82f6fcb9"},
+    {file = "statute_patterns-0.0.6-py3-none-any.whl", hash = "sha256:49c3fb34f0044739e229a1d90b909a135673d7cd062db166fdab086688437512"},
+    {file = "statute_patterns-0.0.6.tar.gz", hash = "sha256:8a66798d2fd46a000239e22dc66c4902f5376df8a2ea6e62170790aedba68dba"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
