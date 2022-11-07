@@ -1,6 +1,8 @@
 import datetime
 import re
+from abc import ABC, abstractmethod
 from enum import Enum
+from typing import Iterator
 
 from citation_utils import Citation
 from dateutil.parser import parse
@@ -13,7 +15,7 @@ from pydantic import (
     validator,
 )
 from slugify import slugify
-from statute_patterns import StatuteCategory, extract_rule
+from statute_patterns import StatuteSerialCategory, extract_rule
 
 """
 Note: The fields are marked with col and index for future use by the sqlpyd library.
@@ -181,12 +183,14 @@ class Node(BaseModel):
 class StatuteBase(BaseModel):
     """Unlike a `Rule` object under `statute_patterns`, the fields for category and serial id are optional since a passed statute may not have been included in the limited set of statutes included in the `extract_rules()` function."""
 
-    statute_category: StatuteCategory | None = Field(None, col=str, index=True)
+    statute_category: StatuteSerialCategory | None = Field(
+        None, col=str, index=True
+    )
     statute_serial_id: str | None = Field(None, col=str, index=True)
 
     @validator("statute_category", pre=True)
     def category_in_lower_case(cls, v):
-        return StatuteCategory(v.lower()) if v else None
+        return StatuteSerialCategory(v.lower()) if v else None
 
     @validator("statute_serial_id", pre=True)
     def serial_id_lower(cls, v):
@@ -339,3 +343,41 @@ class CitationAffector(EventCitation):
     class Config:
         use_enum_values = True
         anystr_strip_whitespace = True
+
+
+class TreeishNode(ABC):
+    """The building block of the tree. Each category of tree is different since the way they're built is nuanced, e.g. CodeUnits need a `history` field, and DocUnits need a `sources` field. However both types share the same foundational structure."""
+
+    @classmethod
+    @abstractmethod
+    def create_branches(cls, units: list[dict], parent_id: str = "1."):
+        """Each material path tree begins will eventually start with a root of `1.` so that each branch will be a material path (identified by the `id`) to the root."""
+        raise NotImplementedError(
+            "Tree-based nodes must have a create_branches() function; note that each branching function for each tree category is different."
+        )
+
+    @classmethod
+    @abstractmethod
+    def searchables(cls, pk: str, units: list) -> Iterator[dict]:
+        """The `pk` indicated refers to the container, i.e. the foreign key Codification / Statute / Document. So every dict generated will have a unique material path with a `unit_text` that is searchable and highlightable via sqlite's FTS."""
+        raise NotImplementedError(
+            "Tree-based nodes must generate sqlite-compatible fts unit_text columns that is searchable and whose snippet (see sqlite's snippet() function) can be highlighted."
+        )
+
+    @classmethod
+    @abstractmethod
+    def finalize_tree(
+        cls, units: list[dict], title: str, kind: str, pk: str
+    ) -> dict:
+        """Generate a valid json string that is queryable via sqlite JSON1 and an html string built from tailwind classes, see `.markup.create_tree()`"""
+        raise NotImplementedError(
+            "Tree-based nodes must result in a valid json string for sqlite and a valid html string to display as jinja variable."
+        )
+
+    @classmethod
+    @abstractmethod
+    def tree_setup(cls, data: dict, title: str, pk: str):
+        """Given a dictionary with a key `units`, create a tree whose root will have a `title` and whose subnodes, branches will have a url having a uniform prefix, signifying that the node belongs to an object with said `pk`."""
+        raise NotImplementedError(
+            "Wrapper around finalize_tree based on a dictionary `data` with a key `units`."
+        )
