@@ -1,0 +1,86 @@
+units:
+- item: Container 1
+  caption: Preliminary Title
+  units:
+  - item: Chapter 1
+    caption: Effect and Application of Laws
+    units:
+    - item: Article 1
+      content: |
+        This Act shall be known as the "Civil Code of the Philippines." (n)
+    - item: Article 2
+      content: |
+        Laws shall take effect after fifteen days following the completion of their publication either in the Official Gazette or in a newspaper of general circulation in the Philippines, unless it is otherwise provided. (1a)
+      history:
+      - locator: Article 1
+        statute: Spanish Civil Code
+      - locator: Article 2
+        statute: Republic Act No. 386
+        content: Laws shall take effect
+      - locator: Section 1
+        statute: Executive Order No. 200
+        content: Laws shall take effect
+        action: Amended
+      - locator: Section 18
+        caption: When Laws Take Effect.
+        statute: Executive Order No. 292
+        action: Adopted
+      - decision_title: Tañada v. Tuvera
+        citation: 220 Phil. 422
+        action: Interpreted
+        snippet: The clear object of the above-quoted provision is to give the general public adequate notice of the various laws which are to regulate their actions and conduct as citizens. Without such notice and publication, there would be no basis for the application of the maxim "ignorantia legis non excusat." It would be the height of injustice to punish or otherwise burden a citizen for the transgression of a law of which he had no notice whatsoever, not even a constructive one.
+      - decision_title: Tañada v. Tuvera
+        citation: 230 Phil. 528
+        action: Interpreted
+        snippet: There is much to be said of the view that the publication need not be made in the Official Gazette, considering its erratic releases and limited readership. Undoubtedly, newspapers of general circulation could better perform the function of communicating, the laws to the people as such periodicals are more easily available, have a wider readership, and come out regularly. The trouble, though, is that this kind of publication is not the one required or authorized by existing law. As far as we know, no amendment has been made of Article 2 of the Civil Code. The Solicitor General has not pointed to such a law, and we have no information that it exists. If it does, it obviously has not yet been published.
+      faq:
+      - question: What is a newspaper of general circulation?
+        answer: A newspaper of general circulation is published for the dissemination of local news and general information; it has a bona fide subscription list of paying subscribers; and it is published at regular intervals.  The newspaper must not also be devoted to the interest or published for the entertainment of a particular class, profession, trade, calling, race or religious denomination.  The newspaper need not have the largest circulation so long as it is of general circulation.
+        query: the dissemination of local news and general information
+      - question: What is the rationale for publication?
+        answer: The clear object of the above-quoted provision is to give the general public adequate notice of the various laws which are to regulate their actions and conduct as citizens. Without such notice and publication, there would be no basis for the application of the maxim "ignorantia legis non excusat." It would be the height of injustice to punish or otherwise burden a citizen for the transgression of a law of which he had no notice whatsoever, not even a constructive one.
+        query: give the general public adequate notice
+    - item: Article 3
+      content: |
+        Ignorance of the law excuses no one from compliance therewith. (2)
+      history:
+      - locator: Article 2
+        statute: Spanish Civil Code
+      - locator: Article 2
+        statute: Republic Act No. 386
+      - locator: Section 23
+        caption: Ignorance of the Law.
+        statute: Executive Order No. 292
+        action: Adopted
+      queries:
+      - ignorance of the law does not excuse anyone
+      - ignorantia legis non excusat
+      - ignorance of the law is merely a traditional rule that admits of exceptions
+      - if mistake of law were excusable, the law would be unenforceable
+      - no one can plead ignorance of the law
+- item: Rule 138
+  caption: Attorneys and Admission to Bar
+  units:
+  - item: SECTION 5
+    caption: Additional requirements for other applicants.
+    units:
+    - item: Paragraph 1
+      content: |
+        (Effective 2023 bar examinations onwards) All applicants for admission other than those referred to in the two preceding sections, shall before being admitted to the examination, satisfactorily show that they have successfully completed all the prescribed courses for the degree of Bachelor of Laws or its equivalent degree, in a law school or university officially recognized by the Philippine Government or by the proper authority in the foreign jurisdiction where the degree has been granted.
+    - item: Paragraph 2
+      content: |
+        No applicant who obtained the Bachelor of Laws degree in this jurisdiction shall be admitted to the bar examination unless he or she has satisfactorily completed the following course in a law school or university duly recognized by the government: civil law, commercial law, remedial law, criminal law, public and private international law, political law, labor and social legislation medical jurisprudence, taxation, legal ethics and clinical legal education program.
+    - item: Paragraph 3
+      content: |
+        A Filipino citizen who graduated from a foreign law school shall be admitted to the bar examination only upon submission to the Supreme Court of certifications showing: (a) completion of all courses leading to the degree of Bachelor of Laws or its equivalent degree; (b) recognition or accreditation of the law school by the proper authority; and (c) completion of all the fourth year subjects in the Bachelor of Laws academic program in a law school duly recognized by the Philippine Government. (As amended by B.M. No. 1153, March 09, 2010)
+    history:
+    - locator: Section 5
+      caption: Additional Requirements for Other Applicants.
+      statute: 1940 Rules of Court
+    - locator: Section 5
+      caption: Additional requirements for other applicants.
+      statute: 1964 Rules of Court
+    - locator: Section 5
+      caption: Additional Requirement for Other Applicants.
+      statute: Bar Matter No. 1153
+      date: March 9, 2010

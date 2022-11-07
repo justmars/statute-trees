@@ -1,0 +1,38 @@
+units:
+- caption: Governance
+  units:
+  - caption: Separation of Powers
+    units:
+    - caption: Concept
+      units:
+      - item: Paragraph 1
+        content: |
+          The powers expressly vested in any branch of the Government shall not be exercised by, nor delegated to, any other branch of the Government, except to the extent authorized by the Constitution.
+      - item: Paragraph 2
+        content: |
+          The separation of powers is a fundamental principle in the Philippine system of government. It obtains not through express provision but by actual division in the Constitution. Each department of the government has exclusive cognizance of matters within its jurisdiction, and is supreme within its own sphere.
+      - item: Paragraph 3
+        content: |
+          Under the principle of separation of powers, neither Congress, the President, nor the Judiciary may encroach on fields allocated to the other branches of government. The legislature is generally limited to the enactment of laws, the executive to the enforcement of laws, and the judiciary to their interpretation and application to cases and controversies.
+      - item: Paragraph 4
+        content: |
+          The theory of the separation of powers is designed by its originators to secure action and at the same time to forestall over action which necessarily results from undue concentration of powers, and thereby obtain efficiency and prevent despotism.  Thereby, the "rule of law" was established which narrows the range of governmental action and makes it subject to control by certain legal devices.
+      sources:
+      - locator: 8
+        statute: Executive Order No. 292
+        content: The powers expressly vested in any branch of the Government
+      - query: |
+          "separation of powers" AND (
+            (
+              "branches of government" OR
+              "undue concentration of powers"
+            )
+            OR (
+              "prevent despotism"
+            ) OR
+            (
+              (legislature enacts) AND
+              (judiciary interprets) AND
+              (executive implements)
+            )
+          )
