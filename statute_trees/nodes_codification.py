@@ -1,14 +1,19 @@
 import json
+from pathlib import Path
 from typing import Iterator, Union
 
+import yaml
+from dateutil.parser import parse
 from pydantic import Field
+from statute_patterns import extract_rule
 
-from .markup import create_tree
 from .resources import (
     CitationAffector,
+    Identifier,
     Node,
+    Page,
     StatuteAffector,
-    Tree,
+    StatuteBase,
     TreeishNode,
     generic_mp,
 )
@@ -65,28 +70,41 @@ class CodeUnit(Node, TreeishNode):
             if u.units:
                 yield from cls.searchables(pk, u.units)
 
+
+class CodeStructure(Page):
+    tree: list[CodeUnit]
+
     @classmethod
-    def finalize_tree(cls, units: list[dict], title: str, kind: str, pk: str):
-        branched = list(cls.create_branches(units))
-        rooted = cls(id="1.", item=title, units=branched, history=None)
-        nodes = [rooted.dict(exclude_none=True)]
-        return CodeStructure(
-            tree=branched,
-            html=create_tree(kind, pk, nodes) if nodes else None,
-            units=json.dumps(nodes) if nodes else None,
+    def build(cls, file_path: Path):
+        data = yaml.safe_load(file_path.read_text())
+        title = data.get("title")
+        emails = data.get("emails", ["bot@lawsql.com"])
+        variant = data.get("variant", 1)
+        date = parse(data.get("date")).date()
+        rule = extract_rule(data.get("base"))
+        if not rule:
+            return None
+        tree = CodeUnit(
+            id="1.",
+            item=title,
+            units=list(CodeUnit.create_branches(data.get("units"))),
+            history=None,
         )
-
-    @classmethod
-    def tree_setup(cls, data: dict, title: str, pk: str):
-        if not "units" in data:
-            return None
-        raw_units = data["units"]
-        if not raw_units:
-            return None
-        if not isinstance(raw_units, list):
-            return None
-        return cls.finalize_tree(raw_units, title, "codification", pk)
-
-
-class CodeStructure(Tree):
-    tree: list["CodeUnit"] = Field(exclude=True)
+        return cls(
+            created=file_path.stat().st_ctime,
+            modified=file_path.stat().st_mtime,
+            id=Identifier(
+                text="-".join([rule.cat, rule.id, title]),
+                date=date,
+                variant=variant,
+                emails=emails,
+            ).slug,
+            emails=emails,
+            title=title,
+            description=data.get("description"),
+            date=date,
+            variant=variant,
+            tree=[tree],
+            units=json.dumps(tree.dict(exclude_none=True)),
+            **StatuteBase.from_rule(rule).dict(),
+        )

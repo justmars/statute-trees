@@ -15,7 +15,8 @@ from pydantic import (
     validator,
 )
 from slugify import slugify
-from statute_patterns import Rule, StatuteSerialCategory, extract_rule
+from statute_patterns import Rule, extract_rule
+from statute_patterns.components import StatuteSerialCategory
 
 """
 Note: The fields are marked with col and index for future use by the sqlpyd library.
@@ -130,25 +131,12 @@ class Identifier(BaseModel):
         return slug
 
 
-class Tree(BaseModel):
-    html: str | None = Field(
-        None,
-        description="The DOM string of the tree based on the units field (as formatted by the markup library).",
-        col=str,
-    )
-    units: str | None = Field(
-        None,
-        title="Unit Tree.",
-        description="Tree in JSON string format that can be formatted via html.",
-        col=str,
-    )
-
-
-class Page(Tree):
+class Page(BaseModel):
     """HTML pages will require a `title` and a `description`. Contains the following common fields for use in tree-like structures: `created`, `modified`, `id`, `variant`, `units`."""
 
     created: float = Field(col=float)
     modified: float = Field(col=float)
+    emails: list[EmailStr] = generic_email
     id: str = Field(
         ...,
         title="Non-traditional identifier created by slugifying certain fields.",
@@ -163,6 +151,12 @@ class Page(Tree):
         index=True,
     )
     variant: int = generic_variant
+    units: str | None = Field(
+        None,
+        title="Unit Tree.",
+        description="Tree in JSON string format that can be formatted via html.",
+        col=str,
+    )
 
 
 class Node(BaseModel):
@@ -366,22 +360,4 @@ class TreeishNode(ABC):
         """The `pk` indicated refers to the container, i.e. the foreign key Codification / Statute / Document. So every dict generated will have a unique material path with a `unit_text` that is searchable and highlightable via sqlite's FTS."""
         raise NotImplementedError(
             "Tree-based nodes must generate sqlite-compatible fts unit_text columns that is searchable and whose snippet (see sqlite's snippet() function) can be highlighted."
-        )
-
-    @classmethod
-    @abstractmethod
-    def finalize_tree(
-        cls, units: list[dict], title: str, kind: str, pk: str
-    ) -> dict:
-        """Generate a valid json string that is queryable via sqlite JSON1 and an html string built from tailwind classes, see `.markup.create_tree()`"""
-        raise NotImplementedError(
-            "Tree-based nodes must result in a valid json string for sqlite and a valid html string to display as jinja variable."
-        )
-
-    @classmethod
-    @abstractmethod
-    def tree_setup(cls, data: dict, title: str, pk: str):
-        """Given a dictionary with a key `units`, create a tree whose root will have a `title` and whose subnodes, branches will have a url having a uniform prefix, signifying that the node belongs to an object with said `pk`."""
-        raise NotImplementedError(
-            "Wrapper around finalize_tree based on a dictionary `data` with a key `units`."
         )
