@@ -1339,7 +1339,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.11"
+version = "0.0.12"
 description = "Philippine statutory law pattern matching library."
 category = "main"
 optional = false
@@ -1453,7 +1453,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-pyyaml"
-version = "6.0.12.1"
+version = "6.0.12.2"
 description = "Typing stubs for PyYAML"
 category = "dev"
 optional = false
@@ -1524,7 +1524,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "83debc237fb630c3d7c7c92ac3239bcc6b981c920c132ea10aeab6f01e067d06"
+content-hash = "19603c7247caa9a55a4224ac42452a0646e3171ef546de62926cc3f5b77d3aca"
 
 [metadata.files]
 anyio = [
@@ -2357,8 +2357,8 @@ stack-data = [
     {file = "stack_data-0.6.0.tar.gz", hash = "sha256:8e515439f818efaa251036af72d89e4026e2b03993f3453c000b200fb4f2d6aa"},
 ]
 statute-patterns = [
-    {file = "statute_patterns-0.0.11-py3-none-any.whl", hash = "sha256:2112349db6cc0e6469b09c4143f906be1f3a837c748c42962ce7a5d70d9498fb"},
-    {file = "statute_patterns-0.0.11.tar.gz", hash = "sha256:603d4b1b36184defa165b1445a526566d68befcf0c1665cdbf3e137ebfdb2d86"},
+    {file = "statute_patterns-0.0.12-py3-none-any.whl", hash = "sha256:cc826e9a0978d20544d2e971ebc86a747714005e47d93fc06c1fcf91ce9dfb8c"},
+    {file = "statute_patterns-0.0.12.tar.gz", hash = "sha256:57ee79099e7ee70e5c44f8ddfd12bde43a93e59bb0a0599af05fddd7a57df9dc"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
@@ -2410,8 +2410,8 @@ types-python-slugify = [
     {file = "types_python_slugify-5.0.4-py3-none-any.whl", hash = "sha256:d0564feb7e21bd9ab646e692ae93eb9bf1b36e9b9bf7bf38d52eab43d29de2f6"},
 ]
 types-pyyaml = [
-    {file = "types-PyYAML-6.0.12.1.tar.gz", hash = "sha256:70ccaafcf3fb404d57bffc1529fdd86a13e8b4f2cf9fc3ee81a6408ce0ad59d2"},
-    {file = "types_PyYAML-6.0.12.1-py3-none-any.whl", hash = "sha256:aaf5e51444c13bd34104695a89ad9c48412599a4f615d65a60e649109714f608"},
+    {file = "types-PyYAML-6.0.12.2.tar.gz", hash = "sha256:6840819871c92deebe6a2067fb800c11b8a063632eb4e3e755914e7ab3604e83"},
+    {file = "types_PyYAML-6.0.12.2-py3-none-any.whl", hash = "sha256:1e94e80aafee07a7e798addb2a320e32956a373f376655128ae20637adb2655b"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
