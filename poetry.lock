@@ -1339,7 +1339,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.10"
+version = "0.0.11"
 description = "Philippine statutory law pattern matching library."
 category = "main"
 optional = false
@@ -1437,7 +1437,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-python-dateutil"
-version = "2.8.19.2"
+version = "2.8.19.3"
 description = "Typing stubs for python-dateutil"
 category = "main"
 optional = false
@@ -1524,7 +1524,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "f2e771089745f8202d7d86fcce4a3d213d9c40cfdec91f6a5ebf3e03b56dd0fb"
+content-hash = "83debc237fb630c3d7c7c92ac3239bcc6b981c920c132ea10aeab6f01e067d06"
 
 [metadata.files]
 anyio = [
@@ -2357,8 +2357,8 @@ stack-data = [
     {file = "stack_data-0.6.0.tar.gz", hash = "sha256:8e515439f818efaa251036af72d89e4026e2b03993f3453c000b200fb4f2d6aa"},
 ]
 statute-patterns = [
-    {file = "statute_patterns-0.0.10-py3-none-any.whl", hash = "sha256:ccc4bd03508406a17ce2ca8f429dc36e7a78341714f85e60c08d292188b5cee3"},
-    {file = "statute_patterns-0.0.10.tar.gz", hash = "sha256:f5c35dc87d27fb9dd8ac2d5e57556397d5384ed0652f524a6e313db57806d7ce"},
+    {file = "statute_patterns-0.0.11-py3-none-any.whl", hash = "sha256:2112349db6cc0e6469b09c4143f906be1f3a837c748c42962ce7a5d70d9498fb"},
+    {file = "statute_patterns-0.0.11.tar.gz", hash = "sha256:603d4b1b36184defa165b1445a526566d68befcf0c1665cdbf3e137ebfdb2d86"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
@@ -2402,8 +2402,8 @@ types-markdown = [
     {file = "types_Markdown-3.4.2.1-py3-none-any.whl", hash = "sha256:b2333f6f4b8f69af83de359e10a097e4a3f14bbd6d2484e1829d9b0ec56fa0cb"},
 ]
 types-python-dateutil = [
-    {file = "types-python-dateutil-2.8.19.2.tar.gz", hash = "sha256:e6e32ce18f37765b08c46622287bc8d8136dc0c562d9ad5b8fd158c59963d7a7"},
-    {file = "types_python_dateutil-2.8.19.2-py3-none-any.whl", hash = "sha256:3f4dbe465e7e0c6581db11fd7a4855d1355b78712b3f292bd399cd332247e9c0"},
+    {file = "types-python-dateutil-2.8.19.3.tar.gz", hash = "sha256:a313284df5ed3fd078303262edc0efde28998cd08e5061ef1ccc0bb5fef4d2da"},
+    {file = "types_python_dateutil-2.8.19.3-py3-none-any.whl", hash = "sha256:ce6af1bdf0aca6b7dc8815a664f0e8b55da91ff7851102cf87c87178e7c8e7ec"},
 ]
 types-python-slugify = [
     {file = "types-python-slugify-5.0.4.tar.gz", hash = "sha256:a9d44edf034d5ceab8442ce602f976b7880ee935baeff7443964aed93f7e21d4"},

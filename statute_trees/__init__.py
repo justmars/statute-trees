@@ -1,7 +1,7 @@
 from .markup import create_tree
-from .nodes_codification import CodeUnit
-from .nodes_document import DocUnit
-from .nodes_statute import StatuteUnit
+from .nodes_codification import CodePage, CodeUnit
+from .nodes_document import DocPage, DocUnit
+from .nodes_statute import StatutePage, StatuteUnit
 from .resources import (
     CitationAffector,
     EventCitation,

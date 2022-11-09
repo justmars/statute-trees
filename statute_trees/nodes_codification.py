@@ -71,7 +71,7 @@ class CodeUnit(Node, TreeishNode):
                 yield from cls.searchables(pk, u.units)
 
 
-class CodeStructure(Page):
+class CodePage(Page):
     tree: list[CodeUnit]
 
     @classmethod

@@ -5,7 +5,7 @@ from typing import Iterator
 from pydantic import Field
 from statute_patterns import Rule, StatuteTitle
 
-from .resources import Node, Page, TreeishNode, generic_mp
+from .resources import Node, Page, StatuteBase, TreeishNode, generic_mp
 
 
 class StatuteUnit(Node, TreeishNode):
@@ -63,7 +63,7 @@ class StatuteUnit(Node, TreeishNode):
                 yield from cls.granularize(pk, i.units)
 
 
-class StatutePage(Page):
+class StatutePage(Page, StatuteBase):
     titles: list[StatuteTitle]
     tree: list[StatuteUnit]
 
@@ -73,13 +73,15 @@ class StatutePage(Page):
         details = Rule.get_details(details_path)
         if not details:
             raise Exception("No details from rule.")
+        base = StatuteBase.from_rule(details.rule)
         tree = StatuteUnit(
             id="1.",
             item=details.title,
             units=list(StatuteUnit.create_branches(details.units)),
         )
         return cls(
-            **details.dict(exclude={"units"}),
+            **details.dict(exclude={"units", "rule"}),
+            **base.dict(),
             tree=[tree],
             units=json.dumps(tree.dict(exclude_none=True)),
         )

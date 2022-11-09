@@ -70,7 +70,7 @@ class DocUnit(Node, TreeishNode):
                 yield from cls.searchables(pk, u.units)
 
 
-class DocStructure(Page):
+class DocPage(Page):
     tree: list[DocUnit]
 
     @classmethod
