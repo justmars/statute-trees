@@ -179,9 +179,18 @@ class StatuteBase(BaseModel):
     """Unlike a `Rule` object under `statute_patterns`, the fields for category and serial id are optional since a passed statute may not have been included in the limited set of statutes included in the `extract_rules()` function."""
 
     statute_category: StatuteSerialCategory | None = Field(
-        None, col=str, index=True
+        None,
+        col=str,
+        index=True,
     )
-    statute_serial_id: str | None = Field(None, col=str, index=True)
+    statute_serial_id: str | None = Field(
+        None,
+        col=str,
+        index=True,
+    )
+
+    class Config:
+        use_enum_values = True
 
     @validator("statute_category", pre=True)
     def category_in_lower_case(cls, v):
