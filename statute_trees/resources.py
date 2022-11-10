@@ -82,7 +82,8 @@ generic_email = Field(
     ["bot@lawsql.com"],
     title="Author / Formatter",
     description="Every tree object can be attributable to its maker.",
-)
+    exclude=True,
+)  # Why exclude? The email is attached to the `Page` model; the page model will eventually be used as an abstract class for a StatuteRow, DocumentRow, etc. which does not need an emails field. This is extracted out during corpus-x, hence the need for the exclude.
 
 
 SECTION = re.compile(
