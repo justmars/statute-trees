@@ -21,7 +21,6 @@ class StatuteUnit(Node, TreeishNode):
         parent_id: str = "1.",
     ) -> Iterator["StatuteUnit"]:
         for counter, u in enumerate(units, start=1):
-            short = None
             children = []  # default unit being evaluated
             id = f"{parent_id}{str(counter)}."
             if subunits := u.pop("units", None):  # potential children
