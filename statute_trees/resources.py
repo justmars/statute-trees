@@ -202,7 +202,12 @@ class StatuteBase(BaseModel):
 
     @classmethod
     def from_rule(cls, r: Rule):
-        return cls(statute_category=r.cat, statute_serial_id=r.id)
+        """A rule is generated from a Path. Since there are some paths that do not map to rules because of variants, need to apply a special filter in extracting the proper `statute_serial_id`."""
+        target_id = r.id
+        if r.cat == "rule_am" and re.search(r"^.*sc-\d+$", r.id):
+            # handle cases like rule_am/00-5-03-sc-1 and rule_am/00-5-03-sc-2
+            target_id = re.sub(r"-\d+$", "", r.id)
+        return cls(statute_category=r.cat, statute_serial_id=target_id)
 
 
 class EventStatute(StatuteBase):
