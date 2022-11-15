@@ -151,7 +151,7 @@ class Page(BaseModel):
         col=datetime.date,
         index=True,
     )
-    variant: int = 1  # defaults to 1 since this implies creation.
+    variant: int = generic_variant
     units: str | None = Field(
         None,
         title="Unit Tree.",
