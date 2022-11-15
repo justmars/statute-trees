@@ -1340,7 +1340,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.18"
+version = "0.0.20"
 description = "Philippine statutory law pattern matching library."
 category = "main"
 optional = false
@@ -1525,7 +1525,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e82fc3ba5102614743a12cf07b7e161bb2f2f1d17e9fdce0ceab3e3e5d637ecc"
+content-hash = "346e30f6813b68b98669658b0d06c2f9475da6472a666741656eba0e30147db4"
 
 [metadata.files]
 anyio = [
@@ -2358,8 +2358,8 @@ stack-data = [
     {file = "stack_data-0.6.1.tar.gz", hash = "sha256:6c9a10eb5f342415fe085db551d673955611afb821551f554d91772415464315"},
 ]
 statute-patterns = [
-    {file = "statute_patterns-0.0.18-py3-none-any.whl", hash = "sha256:d2d5f7dcf92f3d3fe63f4a13b46d2f643d9cdd11840707168642a302e352c065"},
-    {file = "statute_patterns-0.0.18.tar.gz", hash = "sha256:a991060387394a886440cd26c9284ef4864a7502a3724a0a57b941738f79392c"},
+    {file = "statute_patterns-0.0.20-py3-none-any.whl", hash = "sha256:6555ab2c4b24cd4cd11b15c3ef4523e93d519d0ad8ec702f3ff8b994e53ce8ae"},
+    {file = "statute_patterns-0.0.20.tar.gz", hash = "sha256:7c1effca0525aa471d77fae69faf40e1572c3de2399356f7121745fdf13528a7"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
