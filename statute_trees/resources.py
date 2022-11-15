@@ -1,11 +1,13 @@
 import datetime
 import re
+import sys
 from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Iterator
 
 from citation_utils import Citation
 from dateutil.parser import parse
+from loguru import logger
 from pydantic import (
     BaseModel,
     EmailStr,
@@ -17,6 +19,22 @@ from pydantic import (
 from slugify import slugify
 from statute_patterns import Rule, extract_rule
 from statute_patterns.components import StatuteSerialCategory
+
+logger.configure(
+    handlers=[
+        {
+            "sink": sys.stdout,
+            "format": "{message}",
+            "level": "ERROR",
+        },
+        {
+            "sink": "logs/tree_setup.log",
+            "format": "{message}",
+            "level": "ERROR",
+            "serialize": True,
+        },
+    ]
+)
 
 """
 Note: The fields are marked with col and index for future use by the sqlpyd library.
@@ -237,6 +255,10 @@ class EventStatute(StatuteBase):
             if rule := extract_rule(stat):
                 values["statute_category"] = rule.cat
                 values["statute_serial_id"] = rule.id
+            else:
+                logger.error(f"Bad codification event; see {values=}")
+        else:
+            logger.error(f"Bad codification event; no statute in {values=}")
         return values
 
     @validator("date", pre=True)

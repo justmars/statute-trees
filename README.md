@@ -1,5 +1,9 @@
 # Statute Trees
 
+## Prerequisite
+
+To add a new statute-pattern that will get recognized, update the `statute-patterns` library. This enables the `Rule` mechanism, a pre-requisite to utilizing the `StatuteBase` pydantic model. Trees are a crucial cog in the `corpus-x` library.
+
 ## Rules
 
 Rules are tree-based. This library facilitates the creation of codifications, statutes, and documents in the form of trees.
