@@ -224,7 +224,7 @@ class EventStatute(StatuteBase):
         col=str,
         index=True,
     )
-    variant: int | None = None
+    variant: int | None = generic_variant
     date: datetime.date = Field(None, col=datetime.date)
 
     # validators
