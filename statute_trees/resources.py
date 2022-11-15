@@ -56,9 +56,9 @@ generic_content = Field(
     fts=True,
 )
 generic_variant = Field(
-    1,
+    None,
     title="Document / Statute / Codification Variant",
-    description="If not supplied, the variant should be 1. There are statutes which have the same category, id, and date, requiring a third-party key to make the value unique. This is the variant key. Example: Administrative Matter No. 19-03-24-SC.",
+    description="There are statutes which have the same category, id, and date, requiring a third-party key to make the value unique. This is the variant key. Example: Administrative Matter No. 19-03-24-SC.",
     col=int,
     index=True,
 )
@@ -119,7 +119,7 @@ class Identifier(BaseModel):
 
     text: str
     date: datetime.date
-    variant: int = generic_variant
+    variant: int = 1  # defaults to 1 since this implies creation.
     emails: list[EmailStr] = generic_email
 
     @property
@@ -151,7 +151,7 @@ class Page(BaseModel):
         col=datetime.date,
         index=True,
     )
-    variant: int = generic_variant
+    variant: int = 1  # defaults to 1 since this implies creation.
     units: str | None = Field(
         None,
         title="Unit Tree.",
@@ -224,7 +224,7 @@ class EventStatute(StatuteBase):
         col=str,
         index=True,
     )
-    variant: int = generic_variant
+    variant: int | None = None
     date: datetime.date = Field(None, col=datetime.date)
 
     # validators

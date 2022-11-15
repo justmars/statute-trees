@@ -25,7 +25,6 @@ def test_event_source():
         "locator": "8",  # converted to string
         "content": "The powers expressly vested in any branch of the Government",
         "statute": "Executive Order No. 292",
-        "variant": 1,
     }
 
 
@@ -53,7 +52,6 @@ def test_document_units_with_layers_and_sources(doc_obj):
                                 "locator": "8",
                                 "content": "The powers expressly vested in any branch of the Government",
                                 "statute": "Executive Order No. 292",
-                                "variant": 1,
                             },
                             {
                                 "query": '"separation of powers" AND (  (    "branches of government" OR    "undue concentration of powers"  )  OR (    "prevent despotism"  ) OR  (    (legislature enacts) AND    (judiciary interprets) AND    (executive implements)  ))'

@@ -31,7 +31,6 @@ def test_codification_units_with_history(code_obj):
                         "locator": "Section 5",
                         "caption": "Additional Requirements for Other Applicants.",
                         "statute": "1940 Rules of Court",
-                        "variant": 1,
                         "action": "Originated",
                     },
                     {
@@ -40,7 +39,6 @@ def test_codification_units_with_history(code_obj):
                         "locator": "Section 5",
                         "caption": "Additional requirements for other applicants.",
                         "statute": "1964 Rules of Court",
-                        "variant": 1,
                         "action": "Originated",
                     },
                     {
@@ -49,7 +47,6 @@ def test_codification_units_with_history(code_obj):
                         "locator": "Section 5",
                         "caption": "Additional Requirement for Other Applicants.",
                         "statute": "Bar Matter No. 1153",
-                        "variant": 1,
                         "date": datetime.date(2010, 3, 9),
                         "action": "Originated",
                     },
