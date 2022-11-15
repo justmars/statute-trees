@@ -320,7 +320,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "exceptiongroup"
-version = "1.0.2"
+version = "1.0.3"
 description = "Backport of PEP 654 (exception groups)"
 category = "dev"
 optional = false
@@ -1340,7 +1340,7 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.17"
+version = "0.0.18"
 description = "Philippine statutory law pattern matching library."
 category = "main"
 optional = false
@@ -1525,7 +1525,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "8a483dd1364ec2e026ef4297374a31e72b2e45427d1e17d6714539ea13b6bebd"
+content-hash = "e82fc3ba5102614743a12cf07b7e161bb2f2f1d17e9fdce0ceab3e3e5d637ecc"
 
 [metadata.files]
 anyio = [
@@ -1801,8 +1801,8 @@ entrypoints = [
     {file = "entrypoints-0.4.tar.gz", hash = "sha256:b706eddaa9218a19ebcd67b56818f05bb27589b1ca9e8d797b74affad4ccacd4"},
 ]
 exceptiongroup = [
-    {file = "exceptiongroup-1.0.2-py3-none-any.whl", hash = "sha256:c22f11ec6a10d2b453871c5c5fe887436c4d1961324ce9090f2ca6ddc4180c27"},
-    {file = "exceptiongroup-1.0.2.tar.gz", hash = "sha256:a31cd183c3dea02e617aab5153588d5f7258a77b51f0ef41b3815ae8a0d0f695"},
+    {file = "exceptiongroup-1.0.3-py3-none-any.whl", hash = "sha256:6002703c7d31fb9950ddc8780840f67880c440895dc1151dd551553aa1246e4a"},
+    {file = "exceptiongroup-1.0.3.tar.gz", hash = "sha256:76cac74b5207c5997678a1c7105cb6f14213c9c63c096a38cfcb529d83ce5c02"},
 ]
 executing = [
     {file = "executing-1.2.0-py2.py3-none-any.whl", hash = "sha256:0314a69e37426e3608aada02473b4161d4caf5a4b244d1d0c48072b8fee7bacc"},
@@ -2358,8 +2358,8 @@ stack-data = [
     {file = "stack_data-0.6.1.tar.gz", hash = "sha256:6c9a10eb5f342415fe085db551d673955611afb821551f554d91772415464315"},
 ]
 statute-patterns = [
-    {file = "statute_patterns-0.0.17-py3-none-any.whl", hash = "sha256:76c21954d2a3ec9350d60ab0e1e16a85d8eec0f2bda3e2ecba1537044e546dba"},
-    {file = "statute_patterns-0.0.17.tar.gz", hash = "sha256:8f84646d7da8987bbc4e7a39e7589d6a5cddf2f4ccc4be4c60e18d6ceba76294"},
+    {file = "statute_patterns-0.0.18-py3-none-any.whl", hash = "sha256:d2d5f7dcf92f3d3fe63f4a13b46d2f643d9cdd11840707168642a302e352c065"},
+    {file = "statute_patterns-0.0.18.tar.gz", hash = "sha256:a991060387394a886440cd26c9284ef4864a7502a3724a0a57b941738f79392c"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
