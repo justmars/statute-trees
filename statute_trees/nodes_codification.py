@@ -5,7 +5,7 @@ from typing import Iterator, Union
 import yaml
 from dateutil.parser import parse
 from pydantic import Field
-from statute_patterns import extract_rule
+from statute_patterns import StatuteDetails, extract_rule
 
 from .resources import (
     CitationAffector,
@@ -71,7 +71,7 @@ class CodeUnit(Node, TreeishNode):
                 yield from cls.searchables(pk, u.units)
 
 
-class CodePage(Page):
+class CodePage(Page, StatuteBase):
     tree: list[CodeUnit]
 
     @classmethod
