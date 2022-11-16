@@ -105,8 +105,6 @@ class CodePage(Page, StatuteBase):
             date=date,
             variant=variant,
             tree=[tree],
-            units=json.dumps(
-                tree.json(exclude_none=True)
-            ),  # need to use json for date serialization from history
+            units=json.dumps([tree.dict(exclude_none=True)]),
             **StatuteBase.from_rule(rule).dict(),
         )

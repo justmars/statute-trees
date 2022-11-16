@@ -170,7 +170,7 @@ class Page(BaseModel):
         index=True,
     )
     variant: int = generic_variant
-    units: str | None = Field(
+    units: str = Field(
         None,
         title="Unit Tree.",
         description="Tree in JSON string format that can be formatted via html.",
@@ -243,7 +243,12 @@ class EventStatute(StatuteBase):
         index=True,
     )
     variant: int | None = generic_variant
-    date: datetime.date = Field(None, col=datetime.date)
+    date: str | None = Field(
+        None,
+        title="Date as String",
+        description="Indicative date only used for event matching.",
+        col=str,  # This is a deliberate converter to make Codification trees (which include StatuteAffectors as events) susceptible to exports as dicts.
+    )
 
     # validators
     _sectionize_loc = validator("locator", allow_reuse=True)(normalize_sec)
@@ -267,7 +272,7 @@ class EventStatute(StatuteBase):
             return None
         try:
             if isinstance(v, str):
-                return parse(v).date()
+                return str(parse(v).date())
         except Exception as e:
             return ValueError(f"Bad date {v=}; {e=}")
         return v

@@ -82,5 +82,5 @@ class StatutePage(Page, StatuteBase):
             **details.dict(exclude={"units", "rule"}),
             **base.dict(),
             tree=[tree],
-            units=json.dumps(tree.dict(exclude_none=True)),
+            units=json.dumps([tree.dict(exclude_none=True)]),
         )
