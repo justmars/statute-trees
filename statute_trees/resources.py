@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Iterator
 
-from citation_utils import Citation
+from citation_utils import Citation, extract_citations
 from dateutil.parser import parse
 from loguru import logger
 from pydantic import (
@@ -345,7 +345,7 @@ class EventCitation(BaseModel):
 
     @validator("citation")
     def citation_must_be_uniform(cls, v):
-        if docs := list(Citation.find_citations(v)):
+        if docs := list(extract_citations(v)):
             if len(docs) == 1:
                 doc = docs[0]
                 return doc.docket or doc.scra or doc.phil or doc.offg

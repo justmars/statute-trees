@@ -174,15 +174,16 @@ python-dateutil = ">=2.8,<3.0"
 
 [[package]]
 name = "citation-docket"
-version = "0.0.6"
+version = "0.0.10"
 description = "Docket citation regexes from Philippine Supreme Court decisions"
 category = "main"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = ">=3.10,<4.0"
 
 [package.dependencies]
+citation-date = ">=0.0.3,<0.0.4"
+pydantic = ">=1.10.2,<2.0.0"
 python-dateutil = ">=2.8.2,<3.0.0"
-types-python-dateutil = ">=2.8.0,<3.0.0"
 
 [[package]]
 name = "citation-report"
@@ -197,28 +198,41 @@ citation-date = ">=0.0.3,<0.0.4"
 
 [[package]]
 name = "citation-utils"
-version = "0.0.13"
-description = "Regex-based docket and report formula for Citations found in Philippine Supreme Court Decisions"
+version = "0.0.15"
+description = "Regex-pattern matching docket / report citations in Philippine Supreme Court Decisions."
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 
 [package.dependencies]
-citation-docket = ">=0.0.6,<0.0.7"
+citation-docket = ">=0.0.10,<0.0.11"
 citation-report = ">=0.0.6,<0.0.7"
+loguru = ">=0.6.0,<0.7.0"
 pydantic = ">=1.10.2,<2.0.0"
 python-slugify = ">=6.1.2,<7.0.0"
+sqlite-utils = ">=3.30,<4.0"
 
 [[package]]
 name = "click"
 version = "8.1.3"
 description = "Composable command line interface toolkit"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
+name = "click-default-group-wheel"
+version = "1.2.2"
+description = "Extends click.Group to invoke a command without explicit subcommand name (packaged as a wheel)"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+click = "*"
 
 [[package]]
 name = "colorama"
@@ -365,7 +379,7 @@ testing = ["covdefaults (>=2.2)", "coverage (>=6.4.2)", "pytest (>=7.1.2)", "pyt
 
 [[package]]
 name = "identify"
-version = "2.5.8"
+version = "2.5.9"
 description = "File identification library for Python"
 category = "dev"
 optional = false
@@ -553,7 +567,7 @@ qtconsole = "*"
 
 [[package]]
 name = "jupyter-client"
-version = "7.4.6"
+version = "7.4.7"
 description = "Jupyter protocol implementation and client libraries"
 category = "dev"
 optional = false
@@ -1302,7 +1316,7 @@ win32 = ["pywin32"]
 
 [[package]]
 name = "setuptools"
-version = "65.5.1"
+version = "65.6.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 category = "dev"
 optional = false
@@ -1338,6 +1352,38 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "sqlite-fts4"
+version = "1.0.3"
+description = "Python functions for working with SQLite FTS4 search"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+test = ["pytest"]
+
+[[package]]
+name = "sqlite-utils"
+version = "3.30"
+description = "CLI tool and Python utility functions for manipulating SQLite databases"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+click = "*"
+click-default-group-wheel = "*"
+python-dateutil = "*"
+sqlite-fts4 = "*"
+tabulate = "*"
+
+[package.extras]
+docs = ["beanbag-docutils (>=2.0)", "codespell", "furo", "sphinx-autobuild", "sphinx-copybutton"]
+flake8 = ["flake8"]
+mypy = ["data-science-types", "mypy", "types-click", "types-python-dateutil", "types-tabulate"]
+test = ["black", "cogapp", "hypothesis", "pytest"]
+
+[[package]]
 name = "stack-data"
 version = "0.6.1"
 description = "Extract data from python stack frames and tracebacks for informative displays"
@@ -1366,6 +1412,17 @@ email-validator = ">=1.3.0,<2.0.0"
 pydantic = ">=1.10.2,<2.0.0"
 python-dotenv = ">=0.21,<0.22"
 python-slugify = ">=6.1.2,<7.0.0"
+
+[[package]]
+name = "tabulate"
+version = "0.9.0"
+description = "Pretty-print tabular data"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+widechars = ["wcwidth"]
 
 [[package]]
 name = "terminado"
@@ -1453,9 +1510,9 @@ python-versions = "*"
 
 [[package]]
 name = "types-python-dateutil"
-version = "2.8.19.3"
+version = "2.8.19.4"
 description = "Typing stubs for python-dateutil"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1551,7 +1608,7 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1eaf3ffcf0353393dc826d2ed8c9e57a8d0bd903d9211ac8fd78b5a27e1a509a"
+content-hash = "bebce5f2511080bd4a5a05ae3f0be48c1c01dfd8579303d9714309712fcc63de"
 
 [metadata.files]
 anyio = [
@@ -1707,20 +1764,24 @@ citation-date = [
     {file = "citation_date-0.0.3-py3-none-any.whl", hash = "sha256:cc6f648bb5c97b37959405e927da200f0cc0664ca337cb9325a3ac52a3b8be2a"},
 ]
 citation-docket = [
-    {file = "citation_docket-0.0.6-py3-none-any.whl", hash = "sha256:69a952705f4b2ec979cae30f2fd097468e3b4e16da08a28eb070908b4869b092"},
-    {file = "citation_docket-0.0.6.tar.gz", hash = "sha256:4aa1e0df48645d4604d06f144f0607943f05498d0a22372a2b1e9fccab9e226c"},
+    {file = "citation_docket-0.0.10-py3-none-any.whl", hash = "sha256:0436f0bcddf591ff432fe679d0fffe4e3c572cb2b04c2925a3847effdfdcf5f3"},
+    {file = "citation_docket-0.0.10.tar.gz", hash = "sha256:c51dc7f292fbd47b0e5bd17e80e24030b580231832c3df41b6ace70516afa872"},
 ]
 citation-report = [
     {file = "citation-report-0.0.6.tar.gz", hash = "sha256:714bb38ddb3c18891803bff0076467d3ea50340aaf795bcab7091fe5a89541b1"},
     {file = "citation_report-0.0.6-py3-none-any.whl", hash = "sha256:6ef72fa5e80dfc6da7c130cc7fdbb58e33e235b68f9ee92fb0a487c5aaac3b45"},
 ]
 citation-utils = [
-    {file = "citation_utils-0.0.13-py3-none-any.whl", hash = "sha256:3154f041212d5eafbac0fc9f3fb4053d4b872cdea92b0ee4f70ce64fbaf60616"},
-    {file = "citation_utils-0.0.13.tar.gz", hash = "sha256:2e8b47eb071511dc19c1fbe3beb994ad6ae3d232e1b4a1470025e6eb6c6a95a5"},
+    {file = "citation_utils-0.0.15-py3-none-any.whl", hash = "sha256:98dcece1c77217ce14a04f28c92151b59b581f8d1eb63aa49ecc6d304a3b62ad"},
+    {file = "citation_utils-0.0.15.tar.gz", hash = "sha256:2a8355886aa31959f965e402b7c5b6bfa01b31e33f3d56368533248edc5689f1"},
 ]
 click = [
     {file = "click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
     {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
+]
+click-default-group-wheel = [
+    {file = "click-default-group-wheel-1.2.2.tar.gz", hash = "sha256:e90da42d92c03e88a12ed0c0b69c8a29afb5d36e3dc8d29c423ba4219e6d7747"},
+    {file = "click_default_group_wheel-1.2.2-py3-none-any.whl", hash = "sha256:1599b0b6e0ff63ee806c2cb76593cb8cc73e723cd53532c92bc496dc6fc90e5c"},
 ]
 colorama = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
@@ -1843,8 +1904,8 @@ filelock = [
     {file = "filelock-3.8.0.tar.gz", hash = "sha256:55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc"},
 ]
 identify = [
-    {file = "identify-2.5.8-py2.py3-none-any.whl", hash = "sha256:48b7925fe122720088aeb7a6c34f17b27e706b72c61070f27fe3789094233440"},
-    {file = "identify-2.5.8.tar.gz", hash = "sha256:7a214a10313b9489a0d61467db2856ae8d0b8306fc923e03a9effa53d8aedc58"},
+    {file = "identify-2.5.9-py2.py3-none-any.whl", hash = "sha256:a390fb696e164dbddb047a0db26e57972ae52fbd037ae68797e5ae2f4492485d"},
+    {file = "identify-2.5.9.tar.gz", hash = "sha256:906036344ca769539610436e40a684e170c3648b552194980bb7b617a8daeb9f"},
 ]
 idna = [
     {file = "idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"},
@@ -1892,8 +1953,8 @@ jupyter = [
     {file = "jupyter-1.0.0.zip", hash = "sha256:3e1f86076bbb7c8c207829390305a2b1fe836d471ed54be66a3b8c41e7f46cc7"},
 ]
 jupyter-client = [
-    {file = "jupyter_client-7.4.6-py3-none-any.whl", hash = "sha256:540b6a5c9c2dc481c5dd54fd5acb260f03dfaaa7c5325b2ffb1f676710f8c7c4"},
-    {file = "jupyter_client-7.4.6.tar.gz", hash = "sha256:f7f9a9dc3a0ecd223ed6a5a00cf4140a5c252ec72e52d6de370748ed0aa083dd"},
+    {file = "jupyter_client-7.4.7-py3-none-any.whl", hash = "sha256:df56ae23b8e1da1b66f89dee1368e948b24a7f780fa822c5735187589fc4c157"},
+    {file = "jupyter_client-7.4.7.tar.gz", hash = "sha256:330f6b627e0b4bf2f54a3a0dd9e4a22d2b649c8518168afedce2c96a1ceb2860"},
 ]
 jupyter-console = [
     {file = "jupyter_console-6.4.4-py3-none-any.whl", hash = "sha256:756df7f4f60c986e7bc0172e4493d3830a7e6e75c08750bbe59c0a5403ad6dee"},
@@ -2366,8 +2427,8 @@ send2trash = [
     {file = "Send2Trash-1.8.0.tar.gz", hash = "sha256:d2c24762fd3759860a0aff155e45871447ea58d2be6bdd39b5c8f966a0c99c2d"},
 ]
 setuptools = [
-    {file = "setuptools-65.5.1-py3-none-any.whl", hash = "sha256:d0b9a8433464d5800cbe05094acf5c6d52a91bfac9b52bcfc4d41382be5d5d31"},
-    {file = "setuptools-65.5.1.tar.gz", hash = "sha256:e197a19aa8ec9722928f2206f8de752def0e4c9fc6953527360d1c36d94ddb2f"},
+    {file = "setuptools-65.6.0-py3-none-any.whl", hash = "sha256:6211d2f5eddad8757bd0484923ca7c0a6302ebc4ab32ea5e94357176e0ca0840"},
+    {file = "setuptools-65.6.0.tar.gz", hash = "sha256:d1eebf881c6114e51df1664bc2c9133d022f78d12d5f4f665b9191f084e2862d"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
@@ -2381,6 +2442,14 @@ soupsieve = [
     {file = "soupsieve-2.3.2.post1-py3-none-any.whl", hash = "sha256:3b2503d3c7084a42b1ebd08116e5f81aadfaea95863628c80a3b774a11b7c759"},
     {file = "soupsieve-2.3.2.post1.tar.gz", hash = "sha256:fc53893b3da2c33de295667a0e19f078c14bf86544af307354de5fcf12a3f30d"},
 ]
+sqlite-fts4 = [
+    {file = "sqlite-fts4-1.0.3.tar.gz", hash = "sha256:78b05eeaf6680e9dbed8986bde011e9c086a06cb0c931b3cf7da94c214e8930c"},
+    {file = "sqlite_fts4-1.0.3-py3-none-any.whl", hash = "sha256:0359edd8dea6fd73c848989e1e2b1f31a50fe5f9d7272299ff0e8dbaa62d035f"},
+]
+sqlite-utils = [
+    {file = "sqlite-utils-3.30.tar.gz", hash = "sha256:30005c12d5f13445659f791766beb6a9900c25f442bea1f980f21d38b75f6e33"},
+    {file = "sqlite_utils-3.30-py3-none-any.whl", hash = "sha256:e2113e5ce8e9c69822fff419145d7144034b0bd7bb6bf9b8bf92bcc6de859705"},
+]
 stack-data = [
     {file = "stack_data-0.6.1-py3-none-any.whl", hash = "sha256:960cb054d6a1b2fdd9cbd529e365b3c163e8dabf1272e02cfe36b58403cff5c6"},
     {file = "stack_data-0.6.1.tar.gz", hash = "sha256:6c9a10eb5f342415fe085db551d673955611afb821551f554d91772415464315"},
@@ -2388,6 +2457,10 @@ stack-data = [
 statute-patterns = [
     {file = "statute_patterns-0.0.22-py3-none-any.whl", hash = "sha256:cdd463cc487fb204981a49dc6cda9b69ed2e28b9574ac67879842889d0a9d598"},
     {file = "statute_patterns-0.0.22.tar.gz", hash = "sha256:e7045ed70ec52b76774698b05495c9dd863998809412d7d2a84217505a3f7147"},
+]
+tabulate = [
+    {file = "tabulate-0.9.0-py3-none-any.whl", hash = "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f"},
+    {file = "tabulate-0.9.0.tar.gz", hash = "sha256:0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c"},
 ]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
@@ -2431,8 +2504,8 @@ types-markdown = [
     {file = "types_Markdown-3.4.2.1-py3-none-any.whl", hash = "sha256:b2333f6f4b8f69af83de359e10a097e4a3f14bbd6d2484e1829d9b0ec56fa0cb"},
 ]
 types-python-dateutil = [
-    {file = "types-python-dateutil-2.8.19.3.tar.gz", hash = "sha256:a313284df5ed3fd078303262edc0efde28998cd08e5061ef1ccc0bb5fef4d2da"},
-    {file = "types_python_dateutil-2.8.19.3-py3-none-any.whl", hash = "sha256:ce6af1bdf0aca6b7dc8815a664f0e8b55da91ff7851102cf87c87178e7c8e7ec"},
+    {file = "types-python-dateutil-2.8.19.4.tar.gz", hash = "sha256:351a8ca9afd4aea662f87c1724d2e1ae59f9f5f99691be3b3b11d2393cd3aaa1"},
+    {file = "types_python_dateutil-2.8.19.4-py3-none-any.whl", hash = "sha256:722a55be8e2eeff749c3e166e7895b0e2f4d29ab4921c0cff27aa6b997d7ee2e"},
 ]
 types-python-slugify = [
     {file = "types-python-slugify-5.0.4.tar.gz", hash = "sha256:a9d44edf034d5ceab8442ce602f976b7880ee935baeff7443964aed93f7e21d4"},

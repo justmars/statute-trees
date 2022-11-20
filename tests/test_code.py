@@ -47,7 +47,7 @@ def test_codification_units_with_history(code_obj):
                         "locator": "Section 5",
                         "caption": "Additional Requirement for Other Applicants.",
                         "statute": "Bar Matter No. 1153",
-                        "date": datetime.date(2010, 3, 9),
+                        "date": "2010-03-09",
                         "action": "Originated",
                     },
                 ],
