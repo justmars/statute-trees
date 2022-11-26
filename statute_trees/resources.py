@@ -5,17 +5,10 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Iterator
 
-from citation_utils import Citation, extract_citations
+from citation_utils import extract_citations
 from dateutil.parser import parse
 from loguru import logger
-from pydantic import (
-    BaseModel,
-    EmailStr,
-    Field,
-    Json,
-    root_validator,
-    validator,
-)
+from pydantic import BaseModel, EmailStr, Field, root_validator, validator
 from slugify import slugify
 from statute_patterns import Rule, extract_rule
 from statute_patterns.components import StatuteSerialCategory

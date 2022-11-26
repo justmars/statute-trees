@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "statute-trees"
-version = "0.0.16"
+version = "0.0.17"
 description = "Law mostly consists of tree-like nodes. This package supports a common tree format for Philippine Codifications, Statutes, and Documents, using a uniform node structure (i.e., leaves of a tree) identified by a given material path."
 authors = ["Marcelino G. Veloso III <mars@veloso.one>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 citation-utils = "^0.0.15"   # has loguru
-statute-patterns = "^0.0.22"
+statute-patterns = "^0.0.23"
 email-validator = "^1.3.0"
 markdown = "^3.4.1"
 jinja2 = "^3.1.2"
