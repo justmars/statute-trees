@@ -1,4 +1,4 @@
-from typing import Iterator
+from collections.abc import Iterator
 
 
 def fetch_values_from_key(data: dict, key: str) -> Iterator:

@@ -1,6 +1,7 @@
 import json
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator, Union
+from typing import Union
 
 import yaml
 from dateutil.parser import parse
@@ -23,7 +24,7 @@ class DocUnit(Node, TreeishNode):
     """Non-table, interim unit for Document objects."""
 
     id: str = generic_mp
-    sources: list[Union[EventStatute, EventCitation, FTSQuery]] | None = Field(
+    sources: list[EventStatute | EventCitation | FTSQuery] | None = Field(
         None,
         title="Legal Basis Sources",
         description="Used in Documents to show the basis of the content node.",

@@ -1,6 +1,6 @@
 import json
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator
 
 from pydantic import Field
 from statute_patterns import Rule, StatuteTitle
@@ -9,7 +9,8 @@ from .resources import Node, Page, StatuteBase, TreeishNode, generic_mp
 
 
 class StatuteUnit(Node, TreeishNode):
-    """Non-table, interim unit for Statute objects. The `short_title` is used as a special field to look for the statute's title within the provisions."""
+    """Non-table, interim unit for Statute objects. The `short_title` is used as a special field to look for the statute's title within the provisions.
+    """
 
     id: str = generic_mp
     units: list["StatuteUnit"] | None = Field(None)
@@ -52,7 +53,8 @@ class StatuteUnit(Node, TreeishNode):
     def granularize(
         cls, pk: str, nodes: list["StatuteUnit"]
     ) -> Iterator[dict]:
-        """Recursive flattening of the tree structure so that each material path (with its separate item, caption, and content) can become their own row."""
+        """Recursive flattening of the tree structure so that each material path (with its separate item, caption, and content) can become their own row.
+        """
         for i in nodes:
             data = i.dict()
             data["statute_id"] = pk
@@ -68,7 +70,8 @@ class StatutePage(Page, StatuteBase):
 
     @classmethod
     def build(cls, details_path: Path):
-        """Most of the pre-processing of statute fields is done by `Rules.get_details()`"""
+        """Most of the pre-processing of statute fields is done by `Rules.get_details()`
+        """
         details = Rule.get_details(details_path)
         if not details:
             raise Exception("No details from rule.")

@@ -22,8 +22,18 @@ def statute_units() -> list[StatuteUnit]:
             units=[
                 StatuteUnit(
                     item="Section 1",
-                    caption="Courts of justice to be maintained in every province.",
-                    content="Courts of justice shall be maintained in every province in the Philippine Islands in which civil government shall be established; which courts shall be open for the trial of all causes proper for their cognizance, and justice shall be therein impartially administered without corruption or unnecessary delay.",
+                    caption=(
+                        "Courts of justice to be maintained in every province."
+                    ),
+                    content=(
+                        "Courts of justice shall be maintained in every"
+                        " province in the Philippine Islands in which civil"
+                        " government shall be established; which courts shall"
+                        " be open for the trial of all causes proper for their"
+                        " cognizance, and justice shall be therein impartially"
+                        " administered without corruption or unnecessary"
+                        " delay."
+                    ),
                     id="1.1.1.",
                     short_title=None,
                     units=[],
@@ -31,7 +41,16 @@ def statute_units() -> list[StatuteUnit]:
                 StatuteUnit(
                     item="Section 2",
                     caption="Constitution of judiciary",
-                    content="The judicial power of the Government of the Philippine Islands shall be vested in a Supreme Court, Courts of First instance, and courts of justices of the peace, together with such special jurisdictions of municipal courts, and other special tribunals as now are or hereafter may be authorized by law. The two courts first named shall be courts of record.",
+                    content=(
+                        "The judicial power of the Government of the"
+                        " Philippine Islands shall be vested in a Supreme"
+                        " Court, Courts of First instance, and courts of"
+                        " justices of the peace, together with such special"
+                        " jurisdictions of municipal courts, and other special"
+                        " tribunals as now are or hereafter may be authorized"
+                        " by law. The two courts first named shall be courts"
+                        " of record."
+                    ),
                     id="1.1.2.",
                     short_title=None,
                     units=[],
@@ -55,15 +74,34 @@ def test_statute_unit_material_paths(statute_units):
             "units": [
                 {
                     "item": "Section 1",
-                    "caption": "Courts of justice to be maintained in every province.",
-                    "content": "Courts of justice shall be maintained in every province in the Philippine Islands in which civil government shall be established; which courts shall be open for the trial of all causes proper for their cognizance, and justice shall be therein impartially administered without corruption or unnecessary delay.",
+                    "caption": (
+                        "Courts of justice to be maintained in every province."
+                    ),
+                    "content": (
+                        "Courts of justice shall be maintained in every"
+                        " province in the Philippine Islands in which civil"
+                        " government shall be established; which courts shall"
+                        " be open for the trial of all causes proper for their"
+                        " cognizance, and justice shall be therein impartially"
+                        " administered without corruption or unnecessary"
+                        " delay."
+                    ),
                     "id": "1.1.1.",
                     "units": [],
                 },
                 {
                     "item": "Section 2",
                     "caption": "Constitution of judiciary",
-                    "content": "The judicial power of the Government of the Philippine Islands shall be vested in a Supreme Court, Courts of First instance, and courts of justices of the peace, together with such special jurisdictions of municipal courts, and other special tribunals as now are or hereafter may be authorized by law. The two courts first named shall be courts of record.",
+                    "content": (
+                        "The judicial power of the Government of the"
+                        " Philippine Islands shall be vested in a Supreme"
+                        " Court, Courts of First instance, and courts of"
+                        " justices of the peace, together with such special"
+                        " jurisdictions of municipal courts, and other special"
+                        " tribunals as now are or hereafter may be authorized"
+                        " by law. The two courts first named shall be courts"
+                        " of record."
+                    ),
                     "id": "1.1.2.",
                     "units": [],
                 },
@@ -74,7 +112,14 @@ def test_statute_unit_material_paths(statute_units):
         {
             "item": "Section 1",
             "caption": "Courts of justice to be maintained in every province.",
-            "content": "Courts of justice shall be maintained in every province in the Philippine Islands in which civil government shall be established; which courts shall be open for the trial of all causes proper for their cognizance, and justice shall be therein impartially administered without corruption or unnecessary delay.",
+            "content": (
+                "Courts of justice shall be maintained in every province in"
+                " the Philippine Islands in which civil government shall be"
+                " established; which courts shall be open for the trial of all"
+                " causes proper for their cognizance, and justice shall be"
+                " therein impartially administered without corruption or"
+                " unnecessary delay."
+            ),
             "units": [],
             "statute_id": "pk_923452",
             "material_path": "1.1.1.",
@@ -82,7 +127,15 @@ def test_statute_unit_material_paths(statute_units):
         {
             "item": "Section 2",
             "caption": "Constitution of judiciary",
-            "content": "The judicial power of the Government of the Philippine Islands shall be vested in a Supreme Court, Courts of First instance, and courts of justices of the peace, together with such special jurisdictions of municipal courts, and other special tribunals as now are or hereafter may be authorized by law. The two courts first named shall be courts of record.",
+            "content": (
+                "The judicial power of the Government of the Philippine"
+                " Islands shall be vested in a Supreme Court, Courts of First"
+                " instance, and courts of justices of the peace, together with"
+                " such special jurisdictions of municipal courts, and other"
+                " special tribunals as now are or hereafter may be authorized"
+                " by law. The two courts first named shall be courts of"
+                " record."
+            ),
             "units": [],
             "statute_id": "pk_923452",
             "material_path": "1.1.2.",
@@ -100,11 +153,27 @@ def test_statute_unit_searchables(statute_units):
         {
             "material_path": "1.1.1.",
             "statute_id": "pk_923452",
-            "unit_text": "Courts of justice to be maintained in every province.. Courts of justice shall be maintained in every province in the Philippine Islands in which civil government shall be established; which courts shall be open for the trial of all causes proper for their cognizance, and justice shall be therein impartially administered without corruption or unnecessary delay.",
+            "unit_text": (
+                "Courts of justice to be maintained in every province.. Courts"
+                " of justice shall be maintained in every province in the"
+                " Philippine Islands in which civil government shall be"
+                " established; which courts shall be open for the trial of all"
+                " causes proper for their cognizance, and justice shall be"
+                " therein impartially administered without corruption or"
+                " unnecessary delay."
+            ),
         },
         {
             "material_path": "1.1.2.",
             "statute_id": "pk_923452",
-            "unit_text": "Constitution of judiciary. The judicial power of the Government of the Philippine Islands shall be vested in a Supreme Court, Courts of First instance, and courts of justices of the peace, together with such special jurisdictions of municipal courts, and other special tribunals as now are or hereafter may be authorized by law. The two courts first named shall be courts of record.",
+            "unit_text": (
+                "Constitution of judiciary. The judicial power of the"
+                " Government of the Philippine Islands shall be vested in a"
+                " Supreme Court, Courts of First instance, and courts of"
+                " justices of the peace, together with such special"
+                " jurisdictions of municipal courts, and other special"
+                " tribunals as now are or hereafter may be authorized by law."
+                " The two courts first named shall be courts of record."
+            ),
         },
     ]

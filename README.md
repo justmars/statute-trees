@@ -8,7 +8,7 @@ To add a new statute-pattern that will get recognized, update the `statute-patte
 
 Rules are tree-based. This library facilitates the creation of codifications, statutes, and documents in the form of trees.
 
-```python
+```python shell
 trees=CodeUnit(
         item='Modern Child and Youth Welfare Code',
         caption=None,
@@ -74,7 +74,7 @@ class Node:
 
 If we imagine this to be the root of the tree, it can branch out using a `units` key like so:
 
-```python
+```python shell
 >>> data = [
         {
             "item": "Preliminary Title",

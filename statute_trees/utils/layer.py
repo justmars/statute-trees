@@ -1,6 +1,7 @@
 import string
+from collections.abc import Iterator
 from enum import Enum
-from typing import Iterator, NamedTuple
+from typing import NamedTuple
 
 DIGIT_RANGE = range(1, 79)
 """This enables an enumeration of 1 to 78, that's three iterations of the alphabet, 26 * 3"""

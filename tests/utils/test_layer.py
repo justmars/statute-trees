@@ -13,7 +13,10 @@ def itemless_data() -> list[dict]:
                     "caption": "Effect and Application of Laws",
                     "units": [
                         {
-                            "content": 'This Act shall be known as the "Civil Code of the Philippines." (n)\n',
+                            "content": (
+                                'This Act shall be known as the "Civil Code of'
+                                ' the Philippines." (n)\n'
+                            ),
                             "units": [
                                 {
                                     "caption": "Sample",
@@ -26,7 +29,14 @@ def itemless_data() -> list[dict]:
                             ],
                         },
                         {
-                            "content": "Laws shall take effect after fifteen days following the completion of their publication either in the Official Gazette or in a newspaper of general circulation in the Philippines, unless it is otherwise provided. (1a)\n",
+                            "content": (
+                                "Laws shall take effect after fifteen days"
+                                " following the completion of their"
+                                " publication either in the Official Gazette"
+                                " or in a newspaper of general circulation in"
+                                " the Philippines, unless it is otherwise"
+                                " provided. (1a)\n"
+                            ),
                         },
                     ],
                 }
@@ -45,7 +55,10 @@ def test_layered_items(itemless_data):
                     "caption": "Effect and Application of Laws",
                     "units": [
                         {
-                            "content": 'This Act shall be known as the "Civil Code of the Philippines." (n)\n',
+                            "content": (
+                                'This Act shall be known as the "Civil Code of'
+                                ' the Philippines." (n)\n'
+                            ),
                             "units": [
                                 {
                                     "caption": "Sample",
@@ -69,7 +82,14 @@ def test_layered_items(itemless_data):
                             "item": "§A",
                         },
                         {
-                            "content": "Laws shall take effect after fifteen days following the completion of their publication either in the Official Gazette or in a newspaper of general circulation in the Philippines, unless it is otherwise provided. (1a)\n",
+                            "content": (
+                                "Laws shall take effect after fifteen days"
+                                " following the completion of their"
+                                " publication either in the Official Gazette"
+                                " or in a newspaper of general circulation in"
+                                " the Philippines, unless it is otherwise"
+                                " provided. (1a)\n"
+                            ),
                             "item": "§B",
                         },
                     ],

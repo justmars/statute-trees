@@ -4,7 +4,7 @@ Some functions to help with tree like (json-ish) python structures.
 
 ## Setter of IDs
 
-```python
+```python shell
 >>> from statute_trees.utils import set_node_ids
 >>> set_node_ids(data)
 # all nodes in the tree will now have an `id` key, e.g.:
@@ -17,7 +17,7 @@ Some functions to help with tree like (json-ish) python structures.
 
 ## Getter of Node by ID
 
-```python
+```python shell
 >>> from statute_trees.utils import get_node_id
 >>> get_node_id("1.1.1.1.")
 {
@@ -29,7 +29,7 @@ Some functions to help with tree like (json-ish) python structures.
 
 ## Enables Limited Enumeration Per Layer
 
-```python
+```python shell
 >>> raw = [
     {"content": "Parent Node 1"},
     {
@@ -61,7 +61,7 @@ Some functions to help with tree like (json-ish) python structures.
 
 ## Fetcher of Values
 
-```python
+```python shell
 >>> from statute_trees.utils import test_fetch_values_from_key
 >>> list(test_fetch_values_from_key(data[0]), "item")
 [
