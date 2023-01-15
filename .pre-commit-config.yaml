@@ -19,7 +19,7 @@ repos:
       additional_dependencies:
       - flake8-no-pep420==2.0.0
   - repo: https://github.com/pycqa/isort
-    rev: 5.11.1
+    rev: 5.11.4
     hooks:
       - id: isort
         args: ["--profile", "black", "--filter-files"]

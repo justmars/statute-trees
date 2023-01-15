@@ -74,7 +74,7 @@ generic_content = Field(
         "When supplied, this provides the content proper of the unit sought"
         " within a tree."
     ),
-    max_length=100000,
+    max_length=250000,  # see large text fields in ra9154, ra9486
     col=str,
     index=True,
     fts=True,
