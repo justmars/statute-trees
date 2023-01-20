@@ -1,6 +1,7 @@
 .vscode
 .DS_Store
-node_modules
+.ruff_cache
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

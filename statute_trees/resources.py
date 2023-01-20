@@ -111,7 +111,13 @@ generic_email = Field(
     title="Author / Formatter",
     description="Every tree object can be attributable to its maker.",
     exclude=True,
-)  # Why exclude? The email is attached to the `Page` model; the page model will eventually be used as an abstract class for a StatuteRow, DocumentRow, etc. which does not need an emails field. This is extracted out during corpus-x, hence the need for the exclude.
+)
+"""
+Why exclude? The email is attached to the `Page` model; the page model will
+eventually be used as an abstract class for a StatuteRow, DocumentRow, etc.
+which does not need an emails field. This is extracted out during corpus-x,
+hence the need for the exclude.
+"""
 
 
 SECTION = re.compile(
@@ -152,8 +158,9 @@ class Identifier(BaseModel):
 
     @property
     def slug(self):
-        """Extracts the first name of the email address, adds the year from the date and joins the details to forms a single slug.
-        """
+        """Extracts the first name of the email address, adds
+        the year from the date and joins the details to forms a
+        single slug."""
         authors = "-".join(email.split("@")[0] for email in self.emails)
         elements = [authors, self.date.year, self.text, f"v{self.variant}"]
         joined_text = "-".join(str(e) for e in elements)
@@ -162,8 +169,9 @@ class Identifier(BaseModel):
 
 
 class Page(BaseModel):
-    """HTML pages will require a `title` and a `description`. Contains the following common fields for use in tree-like structures: `created`, `modified`, `id`, `variant`, `units`.
-    """
+    """HTML pages will require a `title` and a `description`.
+    Contains the following common fields for use in tree-like structures:
+    `created`, `modified`, `id`, `variant`, `units`."""
 
     created: float = Field(col=float)
     modified: float = Field(col=float)
@@ -195,8 +203,8 @@ class Page(BaseModel):
 
 
 class Node(BaseModel):
-    """Generic node containing the `item`, `caption` and `content` fields. Used in all tree-like structures to signify a node in the tree.
-    """
+    """Generic node containing the `item`, `caption` and `content` fields.
+    Used in all tree-like structures to signify a node in the tree."""
 
     item: str = generic_item
     caption: str | None = generic_caption
@@ -211,8 +219,10 @@ class Node(BaseModel):
 
 
 class StatuteBase(BaseModel):
-    """Unlike a `Rule` object under `statute_patterns`, the fields for category and serial id are optional since a passed statute may not have been included in the limited set of statutes included in the `extract_rules()` function.
-    """
+    """Unlike a `Rule` object under `statute_patterns`, the fields for
+    category and serial id are optional since a passed statute may not
+    have been included in the limited set of statutes included in
+    the `extract_rules()` function."""
 
     statute_category: StatuteSerialCategory | None = Field(
         None,
@@ -238,8 +248,9 @@ class StatuteBase(BaseModel):
 
     @classmethod
     def from_rule(cls, r: Rule):
-        """A rule is generated from a Path. Since there are some paths that do not map to rules because of variants, need to apply a special filter in extracting the proper `statute_serial_id`.
-        """
+        """A rule is generated from a Path. Since there are some paths
+        that do not map to rules because of variants, need to apply a
+        special filter in extracting the proper `statute_serial_id`."""
         target_id = r.id
         if r.cat == "rule_am" and re.search(r"^.*sc-\d+$", r.id):
             # handle cases like rule_am/00-5-03-sc-1 and rule_am/00-5-03-sc-2
@@ -248,7 +259,13 @@ class StatuteBase(BaseModel):
 
 
 class EventStatute(StatuteBase):
-    """The statute + unit item affecting a Codification unit. The combination of the `statute_category`, `statute_serial_id`, `date` and `variant` make it possible to get unique Statute documents.
+    """The statute + unit item affecting a Codification unit. The combination
+    of the `statute_category`, `statute_serial_id`, `date` and `variant` make
+    it possible to get unique Statute documents.
+
+    Re: date field as `str`, this is a deliberate converter to make
+    Codification  trees (which include StatuteAffectors as events) susceptible
+    to exports as `dicts`.
     """
 
     locator: str = generic_item
@@ -271,7 +288,7 @@ class EventStatute(StatuteBase):
         None,
         title="Date as String",
         description="Indicative date only used for event matching.",
-        col=str,  # This is a deliberate converter to make Codification trees (which include StatuteAffectors as events) susceptible to exports as dicts.
+        col=str,
     )
 
     # validators
@@ -384,7 +401,9 @@ class EventCitation(BaseModel):
 
 
 class CitationAffector(EventCitation):
-    """Events can be sourced from a decision. The `decision_title` is represented by the `citation`. The event's effect is signified through the `action` as contextualized through supplied context in the `snippet`..
+    """Events can be sourced from a decision. The `decision_title` is
+    represented by the `citation`. The event's effect is signified through
+    the `action` as contextualized through supplied context in the `snippet`.
     """
 
     decision_title: str = Field(
@@ -423,14 +442,17 @@ class CitationAffector(EventCitation):
 
 
 class TreeishNode(ABC):
-    """The building block of the tree. Each category of tree is different since the way they're built is nuanced, e.g. CodeUnits need a `history` field, and DocUnits need a `sources` field. However both types share the same foundational structure.
-    """
+    """The building block of the tree. Each category of tree is different
+    since the way they're built is nuanced, e.g. CodeUnits need a
+    `history` field, and DocUnits need a `sources` field. However both types
+    share the same foundational structure."""
 
     @classmethod
     @abstractmethod
     def create_branches(cls, units: list[dict], parent_id: str = "1."):
-        """Each material path tree begins will eventually start with a root of `1.` so that each branch will be a material path (identified by the `id`) to the root.
-        """
+        """Each material path tree begins will eventually start with a root
+        of `1.` so that each branch will be a material path (identified by
+        the `id`) to the root."""
         raise NotImplementedError(
             "Tree-based nodes must have a create_branches() function; note"
             " that each branching function for each tree category is"
@@ -440,8 +462,10 @@ class TreeishNode(ABC):
     @classmethod
     @abstractmethod
     def searchables(cls, pk: str, units: list) -> Iterator[dict]:
-        """The `pk` indicated refers to the container, i.e. the foreign key Codification / Statute / Document. So every dict generated will have a unique material path with a `unit_text` that is searchable and highlightable via sqlite's FTS.
-        """
+        """The `pk` indicated refers to the container, i.e. the foreign key
+        Codification / Statute / Document. So every dict generated
+        will have a unique material path with a `unit_text` that is
+        searchable and highlightable via sqlite's FTS."""
         raise NotImplementedError(
             "Tree-based nodes must generate sqlite-compatible fts unit_text"
             " columns that is searchable and whose snippet (see sqlite's"
