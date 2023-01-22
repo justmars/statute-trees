@@ -25,10 +25,6 @@ def set_node_ids(
         parent_id (str, optional): The root node id. Defaults to "1.".
         child_key (str, optional): The node which represents a list of children nodes.
             Defaults to "units".
-
-
-    >>> set_tree_ids(sample_unit_list_data)
-    >>> sample_unit_list_data # note the additional `id` key
     """
     if isinstance(nodes, list):
         for counter, node in enumerate(nodes, start=1):
