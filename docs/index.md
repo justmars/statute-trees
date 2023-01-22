@@ -1,3 +1,8 @@
+---
+hide:
+- navigation
+- toc
+---
 # Statute Trees Docs
 
 ## Rules
