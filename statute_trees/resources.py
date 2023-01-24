@@ -204,7 +204,29 @@ class Page(BaseModel):
 
 class Node(BaseModel):
     """Generic node containing the `item`, `caption` and `content` fields.
-    Used in all tree-like structures to signify a node in the tree."""
+
+    Field | Purpose | Example
+    :--:|:--:|:--
+    `item` | Provide a baseline position of the node | *Article 2*
+    `caption` | That position can have a descriptive caption | Definition of Terms.
+    `content` | Host the text corresponding to the `item` | You can think of a "node" as a branch or leaf of a tree.
+
+    Used in all tree-like structures to signify a node in the tree. Consider:
+
+    ```mermaid
+        flowchart
+            subgraph Article-2
+                direction LR
+                art-2-item[item: Article 2]
+                art-2-caption[caption: Definition of Terms...]
+            end
+            subgraph Article-1
+                direction LR
+                art-1-item[item: Article 1]
+                art-1-content[content: This Act shall be known...]
+            end
+    ```
+    """  # noqa: E501
 
     item: str = generic_item
     caption: str | None = generic_caption
@@ -443,9 +465,41 @@ class CitationAffector(EventCitation):
 
 class TreeishNode(ABC):
     """The building block of the tree. Each category of tree is different
-    since the way they're built is nuanced, e.g. CodeUnits need a
-    `history` field, and DocUnits need a `sources` field. However both types
-    share the same foundational structure."""
+    since the way they're built is nuanced, e.g. a [`Code Unit`][code-unit] needs a
+    `history` field, and [`Doc Unit`][doc-unit] need a `sources` field.
+    However both types share the same foundational structure.
+
+    The chief characteristic of a `TreeishNode` is that it is susceptible of being
+    nested, hence the need for a method to `create_branches()`.
+
+    See example of branching:
+
+    ```mermaid
+        flowchart TB
+            subgraph Preliminary-Title
+                item-prelim[item: Preliminary Title]
+            end
+            subgraph Chapter-1
+                direction LR
+                item[item: Chapter 1]
+                caption[caption: Effect and Application of Laws]
+            end
+            subgraph Article-1
+                direction LR
+                art-1-item[item: Article 1]
+                art-1-content[content: This Act shall be known...]
+            end
+            subgraph Article-2
+                direction LR
+                art-2-item[item: Article 2]
+                art-2-content[content: Laws shall take effect after...]
+            end
+            Preliminary-Title ---ptch1[contains ch. 1]--> Chapter-1
+            Chapter-1 ---ch1art1[contains art. 1]--> Article-1
+            Chapter-1 ---ch1art2[contains art. 2]--> Article-2
+    ```
+
+    """
 
     @classmethod
     @abstractmethod

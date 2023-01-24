@@ -1,18 +1,21 @@
----
-hide:
-- navigation
-- toc
----
 # Trees
 
-## Codification
+## Unit
 
-::: statute_trees.nodes_codification
+::: statute_trees.resources.Node
 
-## Statute
+## Treeish Node
 
-::: statute_trees.nodes_statute
+::: statute_trees.resources.TreeishNode
 
-## Document
+## Statute Unit
 
-::: statute_trees.nodes_document
+::: statute_trees.nodes_statute.StatuteUnit
+
+## Code Unit
+
+::: statute_trees.nodes_codification.CodeUnit
+
+## Doc Unit
+
+::: statute_trees.nodes_document.DocUnit

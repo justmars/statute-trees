@@ -9,9 +9,16 @@ from .resources import Node, Page, StatuteBase, TreeishNode, generic_mp
 
 
 class StatuteUnit(Node, TreeishNode):
-    """Non-table, interim unit for Statute objects. The `short_title` is
-    used as a special field to look for the statute's title within
-    the provisions.
+    """
+    A Statute, as used in this application, is broadly construed. It will refer
+    to any Rule imagined by rule-makers (generally legislators) "in the abstract".
+
+    The rule-makers imagine an event that is likely to happen and think of ways
+    to deal with such an event.
+
+    For our purposes, a Statute can include the Constitution itself, rules concerning
+    pleading, practice, and procedure issued by the Philippine Supreme Court, or even
+    the veto message by the President.
     """
 
     id: str = generic_mp

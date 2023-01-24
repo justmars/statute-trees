@@ -1,8 +1,3 @@
----
-hide:
-- navigation
-- toc
----
 # Example Data
 
 Some functions to help with tree like (json-ish) python structures.

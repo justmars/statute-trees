@@ -143,14 +143,14 @@ files = [
 
 [[package]]
 name = "citation-date"
-version = "0.0.8"
+version = "0.1.1"
 description = "Regex date formula and decoder - Philippine Supreme Court Decisions"
 category = "main"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "citation_date-0.0.8-py3-none-any.whl", hash = "sha256:b8791ccf64b2271eaf632100d3f2e08e30e39d9a34d314ea501dc70cb4082700"},
-    {file = "citation_date-0.0.8.tar.gz", hash = "sha256:e77c77d50aa52130bc692b06057d688a45945e391693e77b7893b6974e318548"},
+    {file = "citation_date-0.1.1-py3-none-any.whl", hash = "sha256:4382eec1a6c83bf8613b3810ba4cd14907afe0fa5a4833069bfbc456b1f46de5"},
+    {file = "citation_date-0.1.1.tar.gz", hash = "sha256:7e2c7d80b53fa3e8c6e865c443fbbc6a2f265de718dff7bd0403a7e80b402f1d"},
 ]
 
 [package.dependencies]
@@ -159,49 +159,49 @@ types-python-dateutil = ">=2.8.19,<3.0.0"
 
 [[package]]
 name = "citation-docket"
-version = "0.0.18"
-description = "Parse legal citations having the docket format - i.e. GR, AM, AC, BM - referring to Philippine Supreme Court decisions."
+version = "0.1.1"
+description = "Regex formula of Philippine Supreme Court citations in docket format, i.e. GR, AM, AC, BM."
 category = "main"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "citation_docket-0.0.18-py3-none-any.whl", hash = "sha256:3a69e5491039b96598b2bae036015e05f4e4650e8c4de6ab0d3c220496f93740"},
-    {file = "citation_docket-0.0.18.tar.gz", hash = "sha256:1928d94adb314059d3d784a03ebb7612df1ab2887dbe046b0e1872a05a58edc4"},
+    {file = "citation_docket-0.1.1-py3-none-any.whl", hash = "sha256:7426359c0482377120f98306cae311e0c72cddf106ea3fdac84effea671b203b"},
+    {file = "citation_docket-0.1.1.tar.gz", hash = "sha256:e4c2da7b4ca852117826fd1d5fe1849c832ad7b55218546cd6bc53f1fd9f4b17"},
 ]
 
 [package.dependencies]
-citation_report = ">=0.0.11,<0.0.12"
+citation_report = ">=0.1.1,<0.2.0"
 
 [[package]]
 name = "citation-report"
-version = "0.0.11"
-description = "Parse legal citations having the publisher format - i.e. SCRA, PHIL, OFFG - referring to Philippine Supreme Court decisions."
+version = "0.1.1"
+description = "Regex formula of Philippine Supreme Court citations in report format, i.e. SCRA, PHIL, OFFG."
 category = "main"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "citation_report-0.0.11-py3-none-any.whl", hash = "sha256:2f5409c1b94ac2ea961bcd41d5fb699c1c3ca6044828ec90636fad6e2601a7b5"},
-    {file = "citation_report-0.0.11.tar.gz", hash = "sha256:81eb84217c7f83213837ee098d22f32bf34e52b791bc0c9ae30606487077cc7b"},
+    {file = "citation_report-0.1.1-py3-none-any.whl", hash = "sha256:8ad84458500559b929eb503124bb914a270e61c4624fae47b5758a14842c0e8f"},
+    {file = "citation_report-0.1.1.tar.gz", hash = "sha256:ea3c257b99f454bd05b58209ad09bf3505ce0c55d2ca9e8f6d3788dd485074a8"},
 ]
 
 [package.dependencies]
-citation-date = ">=0.0.8,<0.0.9"
+citation-date = ">=0.1.1,<0.2.0"
 pydantic = ">=1.10.4,<2.0.0"
 
 [[package]]
 name = "citation-utils"
-version = "0.2.0"
-description = "Regex-based Citations in Philippine Supreme Court decisions."
+version = "0.2.3"
+description = "Regex-based docket- and report- styled citations based on Philippine Supreme Court decisions."
 category = "main"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "citation_utils-0.2.0-py3-none-any.whl", hash = "sha256:1fcf884b55eb7cc386102f2749c32c0ff050e9420ade67a8a5866e9e8fa95cbb"},
-    {file = "citation_utils-0.2.0.tar.gz", hash = "sha256:87ed77523a5ee99c0f22f2fca4fe7784a6b81156749dc4c1f694fe7ded0694f7"},
+    {file = "citation_utils-0.2.3-py3-none-any.whl", hash = "sha256:2d91325fc912fa9099d4c5986c1839113c1feb43580ea6c302dc504697aa4ebb"},
+    {file = "citation_utils-0.2.3.tar.gz", hash = "sha256:eb325ca29c90f1883f3a0e3e6a8f2d0be522b424d75e26c59f3b8add98ef972b"},
 ]
 
 [package.dependencies]
-citation-docket = ">=0.0.18,<0.0.19"
+citation-docket = ">=0.1.0,<0.2.0"
 loguru = ">=0.6.0,<0.7.0"
 python-slugify = ">=6.1.2,<7.0.0"
 sqlite-utils = ">=3.30,<4.0"
@@ -430,14 +430,14 @@ async = ["aiofiles (>=0.7,<1.0)"]
 
 [[package]]
 name = "identify"
-version = "2.5.13"
+version = "2.5.15"
 description = "File identification library for Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "identify-2.5.13-py2.py3-none-any.whl", hash = "sha256:8aa48ce56e38c28b6faa9f261075dea0a942dfbb42b341b4e711896cbb40f3f7"},
-    {file = "identify-2.5.13.tar.gz", hash = "sha256:abb546bca6f470228785338a01b539de8a85bbf46491250ae03363956d8ebb10"},
+    {file = "identify-2.5.15-py2.py3-none-any.whl", hash = "sha256:1f4b36c5f50f3f950864b2a047308743f064eaa6f6645da5e5c780d1c7125487"},
+    {file = "identify-2.5.15.tar.gz", hash = "sha256:c22aa206f47cc40486ecf585d27ad5f40adbfc494a3fa41dc3ed0499a23b123f"},
 ]
 
 [package.extras]
@@ -1253,14 +1253,14 @@ test = ["black", "cogapp", "hypothesis", "pytest"]
 
 [[package]]
 name = "statute-patterns"
-version = "0.0.26"
-description = "Philippine statutory law pattern matching library."
+version = "0.2.0"
+description = "Philippine statutory law pattern matching and unit retrieval."
 category = "main"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "statute_patterns-0.0.26-py3-none-any.whl", hash = "sha256:33d8c0466142d9be42e1a8299eaf50ea8a686b7edab47e00375ed42d74bbd362"},
-    {file = "statute_patterns-0.0.26.tar.gz", hash = "sha256:0af39a862cfae507054b41951e578840a0053ede1e3e8fe0f9fcd6d6b89d3b84"},
+    {file = "statute_patterns-0.2.0-py3-none-any.whl", hash = "sha256:bf4449299b88759a6ff02751204778f36c886c5b2fb0efe84345129f44953b60"},
+    {file = "statute_patterns-0.2.0.tar.gz", hash = "sha256:b92ab0694b4173351960b95aaee5feb7556df668e96af07ff384be62c131b7f8"},
 ]
 
 [package.dependencies]
@@ -1466,4 +1466,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "eb1566e6839036b065d70a99a26a6adc6a5221728bc3f592add8ddbe880f5e04"
+content-hash = "ea2b7a4114848d96cc9bcd292bddd8a41d3957864305eb0c5da3f22a7dae8123"

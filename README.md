@@ -2,7 +2,7 @@
 
 ![Github CI](https://github.com/justmars/statute-trees/actions/workflows/main.yml/badge.svg)
 
-Tree structures utilized in the [LawSQL dataset](https://lawsql.com).
+ Tree-based Philippine Codifications, Statutes, and Documents, using a uniform node structure; utilized in the [LawSQL dataset](https://lawsql.com).
 
 ## Documentation
 

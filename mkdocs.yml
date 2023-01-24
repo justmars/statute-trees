@@ -1,22 +1,19 @@
 site_name: Statute Trees Docs
-site_description: Tree Structures for LawSQL.com
-repo_url: https://github.com/justmars/citation-docket
+site_description: Tree-based Philippine Codifications, Statutes, and Documents, using a uniform node structure (i.e., leaves of a tree) identified by a given material path.
+repo_url: https://github.com/justmars/statute-trees
+site_url: https://lawsql.com
+site_author: Marcelino Veloso III
 theme:
   name: "material"
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: indigo
       accent: pink
       toggle:
         icon: material/brightness-4
@@ -25,7 +22,14 @@ nav:
   - Overview: index.md
   - Trees: trees.md
   - Utils: utils.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/justmars
+      name: justmars on Github
+copyright: Copyright &copy; Marcelino Veloso III
 plugins:
+  - autorefs
   - mkdocstrings:
       handlers:
         python:
@@ -33,7 +37,7 @@ plugins:
             show_root_toc_entry: false
             show_category_heading: true
             show_source: true
-            heading_level: 2
+            heading_level: 4
   - search:
       lang: en
 markdown_extensions:

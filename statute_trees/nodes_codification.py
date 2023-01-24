@@ -1,7 +1,6 @@
 import json
 from collections.abc import Iterator
 from pathlib import Path
-from typing import Union
 
 import yaml
 from dateutil.parser import parse
@@ -21,17 +20,23 @@ from .resources import (
 
 
 class CodeUnit(Node, TreeishNode):
-    """For Codification objects. Unlike a Statute which needs to be
-    pre-processed, a Codification is human edited. A Codification is an
-    attempt to unify disconnected Statutes into a single entity.
+    """
+    ## Basis
+
+    To understand a `CodeUnit`, we need to understand its containing object, i.e.
+    a Codification. A Codification is a restatement of a Statute that is updated
+    over time by related Decisions and other Statutes. It is a human-edited attempt
+    to unify disconnected Decisions and Statutes into a single entity.
+
+    ## History
 
     For instance, the `Family Code of the Philippines` is contained in
     Executive Order No. 209 (1987). However it has since been amended by
     various laws such as Republic Act No. 8533 (1998) and
-    Republic Act No. 10572 (2013) among others.
-
-    In light of the need to record a history, each Codification may
-    contain a `history` field."""
+    Republic Act No. 10572 (2013) among others. In light of the need to record
+    a history, each Codification may
+    contain a `history` field.
+    """
 
     id: str = generic_mp
     history: list[CitationAffector | StatuteAffector] | None = Field(

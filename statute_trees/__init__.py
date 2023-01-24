@@ -1,3 +1,5 @@
+__version__ = "0.1.0"
+
 from .nodes_codification import CodePage, CodeUnit
 from .nodes_document import DocPage, DocUnit
 from .nodes_statute import StatutePage, StatuteUnit
