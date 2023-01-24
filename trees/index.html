@@ -6,9 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Tree Structures for LawSQL.com">
+        <meta name="description" content="Tree-based Philippine Codifications, Statutes, and Documents, using a uniform node structure (i.e., leaves of a tree) identified by a given material path.">
       
       
+        <meta name="author" content="Marcelino Veloso III">
+      
+      
+        <link rel="canonical" href="https://lawsql.com/trees/">
       
       
         <link rel="prev" href="..">
@@ -87,9 +91,7 @@
     
       
 
-  
-
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Statute Trees Docs" class="md-header__button md-logo" aria-label="Statute Trees Docs" data-md-component="logo">
       
@@ -128,7 +130,7 @@
           
         
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -174,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/justmars/citation-docket" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/justmars/statute-trees" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -187,60 +189,13 @@
     
   </nav>
   
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      Overview
-    </a>
-  </li>
-
-      
-        
-  
-  
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Trees
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../utils/" class="md-tabs__link">
-      Utils
-    </a>
-  </li>
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -248,17 +203,13 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Statute Trees Docs" class="md-nav__button md-logo" aria-label="Statute Trees Docs" data-md-component="logo">
       
@@ -270,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/justmars/citation-docket" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/justmars/statute-trees" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -340,57 +291,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#codification" class="md-nav__link">
-    Codification
+  <a href="#unit" class="md-nav__link">
+    Unit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#statute_trees.nodes_codification-classes" class="md-nav__link">
-    Classes
+  <a href="#treeish-node" class="md-nav__link">
+    Treeish Node
   </a>
   
-    <nav class="md-nav" aria-label="Classes">
+    <nav class="md-nav" aria-label="Treeish Node">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_codification.CodeUnit" class="md-nav__link">
-    CodeUnit
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute" class="md-nav__link">
-    Statute
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage" class="md-nav__link">
-    StatutePage
-  </a>
-  
-    <nav class="md-nav" aria-label="StatutePage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage-functions" class="md-nav__link">
+  <a href="#statute_trees.resources.TreeishNode-functions" class="md-nav__link">
     Functions
   </a>
   
@@ -398,28 +314,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage.build" class="md-nav__link">
-    build()
+  <a href="#statute_trees.resources.TreeishNode.create_branches" class="md-nav__link">
+    create_branches()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatuteUnit" class="md-nav__link">
-    StatuteUnit
+  <a href="#statute_trees.resources.TreeishNode.searchables" class="md-nav__link">
+    searchables()
   </a>
   
-    <nav class="md-nav" aria-label="StatuteUnit">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statute-unit" class="md-nav__link">
+    Statute Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Statute Unit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -446,36 +369,38 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#document" class="md-nav__link">
-    Document
+  <a href="#code-unit" class="md-nav__link">
+    Code Unit
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute_trees.nodes_document-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
+    <nav class="md-nav" aria-label="Code Unit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_document.DocUnit" class="md-nav__link">
-    DocUnit
+  <a href="#statute_trees.nodes_codification.CodeUnit--basis" class="md-nav__link">
+    Basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statute_trees.nodes_codification.CodeUnit--history" class="md-nav__link">
+    History
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doc-unit" class="md-nav__link">
+    Doc Unit
+  </a>
   
 </li>
       
@@ -510,9 +435,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -531,57 +454,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#codification" class="md-nav__link">
-    Codification
+  <a href="#unit" class="md-nav__link">
+    Unit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#statute_trees.nodes_codification-classes" class="md-nav__link">
-    Classes
+  <a href="#treeish-node" class="md-nav__link">
+    Treeish Node
   </a>
   
-    <nav class="md-nav" aria-label="Classes">
+    <nav class="md-nav" aria-label="Treeish Node">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_codification.CodeUnit" class="md-nav__link">
-    CodeUnit
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute" class="md-nav__link">
-    Statute
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage" class="md-nav__link">
-    StatutePage
-  </a>
-  
-    <nav class="md-nav" aria-label="StatutePage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage-functions" class="md-nav__link">
+  <a href="#statute_trees.resources.TreeishNode-functions" class="md-nav__link">
     Functions
   </a>
   
@@ -589,28 +477,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatutePage.build" class="md-nav__link">
-    build()
+  <a href="#statute_trees.resources.TreeishNode.create_branches" class="md-nav__link">
+    create_branches()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_statute.StatuteUnit" class="md-nav__link">
-    StatuteUnit
+  <a href="#statute_trees.resources.TreeishNode.searchables" class="md-nav__link">
+    searchables()
   </a>
   
-    <nav class="md-nav" aria-label="StatuteUnit">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statute-unit" class="md-nav__link">
+    Statute Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Statute Unit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -637,36 +532,38 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#document" class="md-nav__link">
-    Document
+  <a href="#code-unit" class="md-nav__link">
+    Code Unit
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statute_trees.nodes_document-classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
+    <nav class="md-nav" aria-label="Code Unit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statute_trees.nodes_document.DocUnit" class="md-nav__link">
-    DocUnit
+  <a href="#statute_trees.nodes_codification.CodeUnit--basis" class="md-nav__link">
+    Basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statute_trees.nodes_codification.CodeUnit--history" class="md-nav__link">
+    History
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doc-unit" class="md-nav__link">
+    Doc Unit
+  </a>
   
 </li>
       
@@ -690,14 +587,134 @@
 
 
 <h1 id="trees">Trees</h1>
-<h2 id="codification">Codification</h2>
+<h2 id="unit">Unit</h2>
 
 
-<div class="doc doc-object doc-module">
+<div class="doc doc-object doc-class">
 
 
 
   <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>Generic node containing the <code>item</code>, <code>caption</code> and <code>content</code> fields.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="center">Purpose</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>item</code></td>
+<td align="center">Provide a baseline position of the node</td>
+<td align="left"><em>Article 2</em></td>
+</tr>
+<tr>
+<td align="center"><code>caption</code></td>
+<td align="center">That position can have a descriptive caption</td>
+<td align="left">Definition of Terms.</td>
+</tr>
+<tr>
+<td align="center"><code>content</code></td>
+<td align="center">Host the text corresponding to the <code>item</code></td>
+<td align="left">You can think of a "node" as a branch or leaf of a tree.</td>
+</tr>
+</tbody>
+</table>
+<p>Used in all tree-like structures to signify a node in the tree. Consider:</p>
+<pre class="mermaid"><code>    flowchart
+        subgraph Article-2
+            direction LR
+            art-2-item[item: Article 2]
+            art-2-caption[caption: Definition of Terms...]
+        end
+        subgraph Article-1
+            direction LR
+            art-1-item[item: Article 1]
+            art-1-content[content: This Act shall be known...]
+        end</code></pre>
+
+
+        <details class="quote">
+          <summary>Source code in <code>statute_trees/resources.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-205">205</a></span>
+<span class="normal"><a href="#__codelineno-0-206">206</a></span>
+<span class="normal"><a href="#__codelineno-0-207">207</a></span>
+<span class="normal"><a href="#__codelineno-0-208">208</a></span>
+<span class="normal"><a href="#__codelineno-0-209">209</a></span>
+<span class="normal"><a href="#__codelineno-0-210">210</a></span>
+<span class="normal"><a href="#__codelineno-0-211">211</a></span>
+<span class="normal"><a href="#__codelineno-0-212">212</a></span>
+<span class="normal"><a href="#__codelineno-0-213">213</a></span>
+<span class="normal"><a href="#__codelineno-0-214">214</a></span>
+<span class="normal"><a href="#__codelineno-0-215">215</a></span>
+<span class="normal"><a href="#__codelineno-0-216">216</a></span>
+<span class="normal"><a href="#__codelineno-0-217">217</a></span>
+<span class="normal"><a href="#__codelineno-0-218">218</a></span>
+<span class="normal"><a href="#__codelineno-0-219">219</a></span>
+<span class="normal"><a href="#__codelineno-0-220">220</a></span>
+<span class="normal"><a href="#__codelineno-0-221">221</a></span>
+<span class="normal"><a href="#__codelineno-0-222">222</a></span>
+<span class="normal"><a href="#__codelineno-0-223">223</a></span>
+<span class="normal"><a href="#__codelineno-0-224">224</a></span>
+<span class="normal"><a href="#__codelineno-0-225">225</a></span>
+<span class="normal"><a href="#__codelineno-0-226">226</a></span>
+<span class="normal"><a href="#__codelineno-0-227">227</a></span>
+<span class="normal"><a href="#__codelineno-0-228">228</a></span>
+<span class="normal"><a href="#__codelineno-0-229">229</a></span>
+<span class="normal"><a href="#__codelineno-0-230">230</a></span>
+<span class="normal"><a href="#__codelineno-0-231">231</a></span>
+<span class="normal"><a href="#__codelineno-0-232">232</a></span>
+<span class="normal"><a href="#__codelineno-0-233">233</a></span>
+<span class="normal"><a href="#__codelineno-0-234">234</a></span>
+<span class="normal"><a href="#__codelineno-0-235">235</a></span>
+<span class="normal"><a href="#__codelineno-0-236">236</a></span>
+<span class="normal"><a href="#__codelineno-0-237">237</a></span>
+<span class="normal"><a href="#__codelineno-0-238">238</a></span>
+<span class="normal"><a href="#__codelineno-0-239">239</a></span>
+<span class="normal"><a href="#__codelineno-0-240">240</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-205" name="__codelineno-0-205"></a><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-0-206" name="__codelineno-0-206"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Generic node containing the `item`, `caption` and `content` fields.</span>
+<a id="__codelineno-0-207" name="__codelineno-0-207"></a>
+<a id="__codelineno-0-208" name="__codelineno-0-208"></a><span class="sd">    Field | Purpose | Example</span>
+<a id="__codelineno-0-209" name="__codelineno-0-209"></a><span class="sd">    :--:|:--:|:--</span>
+<a id="__codelineno-0-210" name="__codelineno-0-210"></a><span class="sd">    `item` | Provide a baseline position of the node | *Article 2*</span>
+<a id="__codelineno-0-211" name="__codelineno-0-211"></a><span class="sd">    `caption` | That position can have a descriptive caption | Definition of Terms.</span>
+<a id="__codelineno-0-212" name="__codelineno-0-212"></a><span class="sd">    `content` | Host the text corresponding to the `item` | You can think of a &quot;node&quot; as a branch or leaf of a tree.</span>
+<a id="__codelineno-0-213" name="__codelineno-0-213"></a>
+<a id="__codelineno-0-214" name="__codelineno-0-214"></a><span class="sd">    Used in all tree-like structures to signify a node in the tree. Consider:</span>
+<a id="__codelineno-0-215" name="__codelineno-0-215"></a>
+<a id="__codelineno-0-216" name="__codelineno-0-216"></a><span class="sd">    ```mermaid</span>
+<a id="__codelineno-0-217" name="__codelineno-0-217"></a><span class="sd">        flowchart</span>
+<a id="__codelineno-0-218" name="__codelineno-0-218"></a><span class="sd">            subgraph Article-2</span>
+<a id="__codelineno-0-219" name="__codelineno-0-219"></a><span class="sd">                direction LR</span>
+<a id="__codelineno-0-220" name="__codelineno-0-220"></a><span class="sd">                art-2-item[item: Article 2]</span>
+<a id="__codelineno-0-221" name="__codelineno-0-221"></a><span class="sd">                art-2-caption[caption: Definition of Terms...]</span>
+<a id="__codelineno-0-222" name="__codelineno-0-222"></a><span class="sd">            end</span>
+<a id="__codelineno-0-223" name="__codelineno-0-223"></a><span class="sd">            subgraph Article-1</span>
+<a id="__codelineno-0-224" name="__codelineno-0-224"></a><span class="sd">                direction LR</span>
+<a id="__codelineno-0-225" name="__codelineno-0-225"></a><span class="sd">                art-1-item[item: Article 1]</span>
+<a id="__codelineno-0-226" name="__codelineno-0-226"></a><span class="sd">                art-1-content[content: This Act shall be known...]</span>
+<a id="__codelineno-0-227" name="__codelineno-0-227"></a><span class="sd">            end</span>
+<a id="__codelineno-0-228" name="__codelineno-0-228"></a><span class="sd">    ```</span>
+<a id="__codelineno-0-229" name="__codelineno-0-229"></a><span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+<a id="__codelineno-0-230" name="__codelineno-0-230"></a>
+<a id="__codelineno-0-231" name="__codelineno-0-231"></a>    <span class="n">item</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">generic_item</span>
+<a id="__codelineno-0-232" name="__codelineno-0-232"></a>    <span class="n">caption</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">generic_caption</span>
+<a id="__codelineno-0-233" name="__codelineno-0-233"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">generic_content</span>
+<a id="__codelineno-0-234" name="__codelineno-0-234"></a>
+<a id="__codelineno-0-235" name="__codelineno-0-235"></a>    <span class="c1"># validators</span>
+<a id="__codelineno-0-236" name="__codelineno-0-236"></a>    <span class="n">_sectionize_item</span> <span class="o">=</span> <span class="n">validator</span><span class="p">(</span><span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">normalize_sec</span><span class="p">)</span>
+<a id="__codelineno-0-237" name="__codelineno-0-237"></a>    <span class="n">_string_cap</span> <span class="o">=</span> <span class="n">validator</span><span class="p">(</span><span class="s2">&quot;caption&quot;</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">normalize_caption</span><span class="p">)</span>
+<a id="__codelineno-0-238" name="__codelineno-0-238"></a>
+<a id="__codelineno-0-239" name="__codelineno-0-239"></a>    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+<a id="__codelineno-0-240" name="__codelineno-0-240"></a>        <span class="n">anystr_strip_whitespace</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+        </details>
 
   
 
@@ -708,38 +725,562 @@
 
 
 
-<h2 id="statute_trees.nodes_codification-classes">Classes</h2>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="treeish-node">Treeish Node</h2>
+
 
 <div class="doc doc-object doc-class">
 
 
 
-<h3 id="statute_trees.nodes_codification.CodeUnit" class="doc doc-heading">
-        <code>CodeUnit</code>
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="abc.ABC">ABC</span></code></p>
+
+  
+      <p>The building block of the tree. Each category of tree is different
+since the way they're built is nuanced, e.g. a <a class="autorefs autorefs-internal" href="#code-unit"><code>Code Unit</code></a> needs a
+<code>history</code> field, and <a class="autorefs autorefs-internal" href="#doc-unit"><code>Doc Unit</code></a> need a <code>sources</code> field.
+However both types share the same foundational structure.</p>
+<p>The chief characteristic of a <code>TreeishNode</code> is that it is susceptible of being
+nested, hence the need for a method to <code>create_branches()</code>.</p>
+<p>See example of branching:</p>
+<pre class="mermaid"><code>    flowchart TB
+        subgraph Preliminary-Title
+            item-prelim[item: Preliminary Title]
+        end
+        subgraph Chapter-1
+            direction LR
+            item[item: Chapter 1]
+            caption[caption: Effect and Application of Laws]
+        end
+        subgraph Article-1
+            direction LR
+            art-1-item[item: Article 1]
+            art-1-content[content: This Act shall be known...]
+        end
+        subgraph Article-2
+            direction LR
+            art-2-item[item: Article 2]
+            art-2-content[content: Laws shall take effect after...]
+        end
+        Preliminary-Title ---ptch1[contains ch. 1]--&gt; Chapter-1
+        Chapter-1 ---ch1art1[contains art. 1]--&gt; Article-1
+        Chapter-1 ---ch1art2[contains art. 2]--&gt; Article-2</code></pre>
 
 
-</h3>
+        <details class="quote">
+          <summary>Source code in <code>statute_trees/resources.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-466">466</a></span>
+<span class="normal"><a href="#__codelineno-0-467">467</a></span>
+<span class="normal"><a href="#__codelineno-0-468">468</a></span>
+<span class="normal"><a href="#__codelineno-0-469">469</a></span>
+<span class="normal"><a href="#__codelineno-0-470">470</a></span>
+<span class="normal"><a href="#__codelineno-0-471">471</a></span>
+<span class="normal"><a href="#__codelineno-0-472">472</a></span>
+<span class="normal"><a href="#__codelineno-0-473">473</a></span>
+<span class="normal"><a href="#__codelineno-0-474">474</a></span>
+<span class="normal"><a href="#__codelineno-0-475">475</a></span>
+<span class="normal"><a href="#__codelineno-0-476">476</a></span>
+<span class="normal"><a href="#__codelineno-0-477">477</a></span>
+<span class="normal"><a href="#__codelineno-0-478">478</a></span>
+<span class="normal"><a href="#__codelineno-0-479">479</a></span>
+<span class="normal"><a href="#__codelineno-0-480">480</a></span>
+<span class="normal"><a href="#__codelineno-0-481">481</a></span>
+<span class="normal"><a href="#__codelineno-0-482">482</a></span>
+<span class="normal"><a href="#__codelineno-0-483">483</a></span>
+<span class="normal"><a href="#__codelineno-0-484">484</a></span>
+<span class="normal"><a href="#__codelineno-0-485">485</a></span>
+<span class="normal"><a href="#__codelineno-0-486">486</a></span>
+<span class="normal"><a href="#__codelineno-0-487">487</a></span>
+<span class="normal"><a href="#__codelineno-0-488">488</a></span>
+<span class="normal"><a href="#__codelineno-0-489">489</a></span>
+<span class="normal"><a href="#__codelineno-0-490">490</a></span>
+<span class="normal"><a href="#__codelineno-0-491">491</a></span>
+<span class="normal"><a href="#__codelineno-0-492">492</a></span>
+<span class="normal"><a href="#__codelineno-0-493">493</a></span>
+<span class="normal"><a href="#__codelineno-0-494">494</a></span>
+<span class="normal"><a href="#__codelineno-0-495">495</a></span>
+<span class="normal"><a href="#__codelineno-0-496">496</a></span>
+<span class="normal"><a href="#__codelineno-0-497">497</a></span>
+<span class="normal"><a href="#__codelineno-0-498">498</a></span>
+<span class="normal"><a href="#__codelineno-0-499">499</a></span>
+<span class="normal"><a href="#__codelineno-0-500">500</a></span>
+<span class="normal"><a href="#__codelineno-0-501">501</a></span>
+<span class="normal"><a href="#__codelineno-0-502">502</a></span>
+<span class="normal"><a href="#__codelineno-0-503">503</a></span>
+<span class="normal"><a href="#__codelineno-0-504">504</a></span>
+<span class="normal"><a href="#__codelineno-0-505">505</a></span>
+<span class="normal"><a href="#__codelineno-0-506">506</a></span>
+<span class="normal"><a href="#__codelineno-0-507">507</a></span>
+<span class="normal"><a href="#__codelineno-0-508">508</a></span>
+<span class="normal"><a href="#__codelineno-0-509">509</a></span>
+<span class="normal"><a href="#__codelineno-0-510">510</a></span>
+<span class="normal"><a href="#__codelineno-0-511">511</a></span>
+<span class="normal"><a href="#__codelineno-0-512">512</a></span>
+<span class="normal"><a href="#__codelineno-0-513">513</a></span>
+<span class="normal"><a href="#__codelineno-0-514">514</a></span>
+<span class="normal"><a href="#__codelineno-0-515">515</a></span>
+<span class="normal"><a href="#__codelineno-0-516">516</a></span>
+<span class="normal"><a href="#__codelineno-0-517">517</a></span>
+<span class="normal"><a href="#__codelineno-0-518">518</a></span>
+<span class="normal"><a href="#__codelineno-0-519">519</a></span>
+<span class="normal"><a href="#__codelineno-0-520">520</a></span>
+<span class="normal"><a href="#__codelineno-0-521">521</a></span>
+<span class="normal"><a href="#__codelineno-0-522">522</a></span>
+<span class="normal"><a href="#__codelineno-0-523">523</a></span>
+<span class="normal"><a href="#__codelineno-0-524">524</a></span>
+<span class="normal"><a href="#__codelineno-0-525">525</a></span>
+<span class="normal"><a href="#__codelineno-0-526">526</a></span>
+<span class="normal"><a href="#__codelineno-0-527">527</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-466" name="__codelineno-0-466"></a><span class="k">class</span> <span class="nc">TreeishNode</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<a id="__codelineno-0-467" name="__codelineno-0-467"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;The building block of the tree. Each category of tree is different</span>
+<a id="__codelineno-0-468" name="__codelineno-0-468"></a><span class="sd">    since the way they&#39;re built is nuanced, e.g. a [`Code Unit`][code-unit] needs a</span>
+<a id="__codelineno-0-469" name="__codelineno-0-469"></a><span class="sd">    `history` field, and [`Doc Unit`][doc-unit] need a `sources` field.</span>
+<a id="__codelineno-0-470" name="__codelineno-0-470"></a><span class="sd">    However both types share the same foundational structure.</span>
+<a id="__codelineno-0-471" name="__codelineno-0-471"></a>
+<a id="__codelineno-0-472" name="__codelineno-0-472"></a><span class="sd">    The chief characteristic of a `TreeishNode` is that it is susceptible of being</span>
+<a id="__codelineno-0-473" name="__codelineno-0-473"></a><span class="sd">    nested, hence the need for a method to `create_branches()`.</span>
+<a id="__codelineno-0-474" name="__codelineno-0-474"></a>
+<a id="__codelineno-0-475" name="__codelineno-0-475"></a><span class="sd">    See example of branching:</span>
+<a id="__codelineno-0-476" name="__codelineno-0-476"></a>
+<a id="__codelineno-0-477" name="__codelineno-0-477"></a><span class="sd">    ```mermaid</span>
+<a id="__codelineno-0-478" name="__codelineno-0-478"></a><span class="sd">        flowchart TB</span>
+<a id="__codelineno-0-479" name="__codelineno-0-479"></a><span class="sd">            subgraph Preliminary-Title</span>
+<a id="__codelineno-0-480" name="__codelineno-0-480"></a><span class="sd">                item-prelim[item: Preliminary Title]</span>
+<a id="__codelineno-0-481" name="__codelineno-0-481"></a><span class="sd">            end</span>
+<a id="__codelineno-0-482" name="__codelineno-0-482"></a><span class="sd">            subgraph Chapter-1</span>
+<a id="__codelineno-0-483" name="__codelineno-0-483"></a><span class="sd">                direction LR</span>
+<a id="__codelineno-0-484" name="__codelineno-0-484"></a><span class="sd">                item[item: Chapter 1]</span>
+<a id="__codelineno-0-485" name="__codelineno-0-485"></a><span class="sd">                caption[caption: Effect and Application of Laws]</span>
+<a id="__codelineno-0-486" name="__codelineno-0-486"></a><span class="sd">            end</span>
+<a id="__codelineno-0-487" name="__codelineno-0-487"></a><span class="sd">            subgraph Article-1</span>
+<a id="__codelineno-0-488" name="__codelineno-0-488"></a><span class="sd">                direction LR</span>
+<a id="__codelineno-0-489" name="__codelineno-0-489"></a><span class="sd">                art-1-item[item: Article 1]</span>
+<a id="__codelineno-0-490" name="__codelineno-0-490"></a><span class="sd">                art-1-content[content: This Act shall be known...]</span>
+<a id="__codelineno-0-491" name="__codelineno-0-491"></a><span class="sd">            end</span>
+<a id="__codelineno-0-492" name="__codelineno-0-492"></a><span class="sd">            subgraph Article-2</span>
+<a id="__codelineno-0-493" name="__codelineno-0-493"></a><span class="sd">                direction LR</span>
+<a id="__codelineno-0-494" name="__codelineno-0-494"></a><span class="sd">                art-2-item[item: Article 2]</span>
+<a id="__codelineno-0-495" name="__codelineno-0-495"></a><span class="sd">                art-2-content[content: Laws shall take effect after...]</span>
+<a id="__codelineno-0-496" name="__codelineno-0-496"></a><span class="sd">            end</span>
+<a id="__codelineno-0-497" name="__codelineno-0-497"></a><span class="sd">            Preliminary-Title ---ptch1[contains ch. 1]--&gt; Chapter-1</span>
+<a id="__codelineno-0-498" name="__codelineno-0-498"></a><span class="sd">            Chapter-1 ---ch1art1[contains art. 1]--&gt; Article-1</span>
+<a id="__codelineno-0-499" name="__codelineno-0-499"></a><span class="sd">            Chapter-1 ---ch1art2[contains art. 2]--&gt; Article-2</span>
+<a id="__codelineno-0-500" name="__codelineno-0-500"></a><span class="sd">    ```</span>
+<a id="__codelineno-0-501" name="__codelineno-0-501"></a>
+<a id="__codelineno-0-502" name="__codelineno-0-502"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-503" name="__codelineno-0-503"></a>
+<a id="__codelineno-0-504" name="__codelineno-0-504"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-505" name="__codelineno-0-505"></a>    <span class="nd">@abstractmethod</span>
+<a id="__codelineno-0-506" name="__codelineno-0-506"></a>    <span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-507" name="__codelineno-0-507"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Each material path tree begins will eventually start with a root</span>
+<a id="__codelineno-0-508" name="__codelineno-0-508"></a><span class="sd">        of `1.` so that each branch will be a material path (identified by</span>
+<a id="__codelineno-0-509" name="__codelineno-0-509"></a><span class="sd">        the `id`) to the root.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-510" name="__codelineno-0-510"></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<a id="__codelineno-0-511" name="__codelineno-0-511"></a>            <span class="s2">&quot;Tree-based nodes must have a create_branches() function; note&quot;</span>
+<a id="__codelineno-0-512" name="__codelineno-0-512"></a>            <span class="s2">&quot; that each branching function for each tree category is&quot;</span>
+<a id="__codelineno-0-513" name="__codelineno-0-513"></a>            <span class="s2">&quot; different.&quot;</span>
+<a id="__codelineno-0-514" name="__codelineno-0-514"></a>        <span class="p">)</span>
+<a id="__codelineno-0-515" name="__codelineno-0-515"></a>
+<a id="__codelineno-0-516" name="__codelineno-0-516"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-517" name="__codelineno-0-517"></a>    <span class="nd">@abstractmethod</span>
+<a id="__codelineno-0-518" name="__codelineno-0-518"></a>    <span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-519" name="__codelineno-0-519"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;The `pk` indicated refers to the container, i.e. the foreign key</span>
+<a id="__codelineno-0-520" name="__codelineno-0-520"></a><span class="sd">        Codification / Statute / Document. So every dict generated</span>
+<a id="__codelineno-0-521" name="__codelineno-0-521"></a><span class="sd">        will have a unique material path with a `unit_text` that is</span>
+<a id="__codelineno-0-522" name="__codelineno-0-522"></a><span class="sd">        searchable and highlightable via sqlite&#39;s FTS.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-523" name="__codelineno-0-523"></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<a id="__codelineno-0-524" name="__codelineno-0-524"></a>            <span class="s2">&quot;Tree-based nodes must generate sqlite-compatible fts unit_text&quot;</span>
+<a id="__codelineno-0-525" name="__codelineno-0-525"></a>            <span class="s2">&quot; columns that is searchable and whose snippet (see sqlite&#39;s&quot;</span>
+<a id="__codelineno-0-526" name="__codelineno-0-526"></a>            <span class="s2">&quot; snippet() function) can be highlighted.&quot;</span>
+<a id="__codelineno-0-527" name="__codelineno-0-527"></a>        <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h4 id="statute_trees.resources.TreeishNode-functions">Functions</h4>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h5 id="statute_trees.resources.TreeishNode.create_branches" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_branches</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="s1">&#39;1.&#39;</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h5>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Each material path tree begins will eventually start with a root
+of <code>1.</code> so that each branch will be a material path (identified by
+the <code>id</code>) to the root.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>statute_trees/resources.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-504">504</a></span>
+<span class="normal"><a href="#__codelineno-0-505">505</a></span>
+<span class="normal"><a href="#__codelineno-0-506">506</a></span>
+<span class="normal"><a href="#__codelineno-0-507">507</a></span>
+<span class="normal"><a href="#__codelineno-0-508">508</a></span>
+<span class="normal"><a href="#__codelineno-0-509">509</a></span>
+<span class="normal"><a href="#__codelineno-0-510">510</a></span>
+<span class="normal"><a href="#__codelineno-0-511">511</a></span>
+<span class="normal"><a href="#__codelineno-0-512">512</a></span>
+<span class="normal"><a href="#__codelineno-0-513">513</a></span>
+<span class="normal"><a href="#__codelineno-0-514">514</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-504" name="__codelineno-0-504"></a><span class="nd">@classmethod</span>
+<a id="__codelineno-0-505" name="__codelineno-0-505"></a><span class="nd">@abstractmethod</span>
+<a id="__codelineno-0-506" name="__codelineno-0-506"></a><span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span><span class="p">):</span>
+<a id="__codelineno-0-507" name="__codelineno-0-507"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Each material path tree begins will eventually start with a root</span>
+<a id="__codelineno-0-508" name="__codelineno-0-508"></a><span class="sd">    of `1.` so that each branch will be a material path (identified by</span>
+<a id="__codelineno-0-509" name="__codelineno-0-509"></a><span class="sd">    the `id`) to the root.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-510" name="__codelineno-0-510"></a>    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<a id="__codelineno-0-511" name="__codelineno-0-511"></a>        <span class="s2">&quot;Tree-based nodes must have a create_branches() function; note&quot;</span>
+<a id="__codelineno-0-512" name="__codelineno-0-512"></a>        <span class="s2">&quot; that each branching function for each tree category is&quot;</span>
+<a id="__codelineno-0-513" name="__codelineno-0-513"></a>        <span class="s2">&quot; different.&quot;</span>
+<a id="__codelineno-0-514" name="__codelineno-0-514"></a>    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h5 id="statute_trees.resources.TreeishNode.searchables" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">searchables</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <code>pk</code> indicated refers to the container, i.e. the foreign key
+Codification / Statute / Document. So every dict generated
+will have a unique material path with a <code>unit_text</code> that is
+searchable and highlightable via sqlite's FTS.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>statute_trees/resources.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-516">516</a></span>
+<span class="normal"><a href="#__codelineno-0-517">517</a></span>
+<span class="normal"><a href="#__codelineno-0-518">518</a></span>
+<span class="normal"><a href="#__codelineno-0-519">519</a></span>
+<span class="normal"><a href="#__codelineno-0-520">520</a></span>
+<span class="normal"><a href="#__codelineno-0-521">521</a></span>
+<span class="normal"><a href="#__codelineno-0-522">522</a></span>
+<span class="normal"><a href="#__codelineno-0-523">523</a></span>
+<span class="normal"><a href="#__codelineno-0-524">524</a></span>
+<span class="normal"><a href="#__codelineno-0-525">525</a></span>
+<span class="normal"><a href="#__codelineno-0-526">526</a></span>
+<span class="normal"><a href="#__codelineno-0-527">527</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-516" name="__codelineno-0-516"></a><span class="nd">@classmethod</span>
+<a id="__codelineno-0-517" name="__codelineno-0-517"></a><span class="nd">@abstractmethod</span>
+<a id="__codelineno-0-518" name="__codelineno-0-518"></a><span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-519" name="__codelineno-0-519"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;The `pk` indicated refers to the container, i.e. the foreign key</span>
+<a id="__codelineno-0-520" name="__codelineno-0-520"></a><span class="sd">    Codification / Statute / Document. So every dict generated</span>
+<a id="__codelineno-0-521" name="__codelineno-0-521"></a><span class="sd">    will have a unique material path with a `unit_text` that is</span>
+<a id="__codelineno-0-522" name="__codelineno-0-522"></a><span class="sd">    searchable and highlightable via sqlite&#39;s FTS.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-523" name="__codelineno-0-523"></a>    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<a id="__codelineno-0-524" name="__codelineno-0-524"></a>        <span class="s2">&quot;Tree-based nodes must generate sqlite-compatible fts unit_text&quot;</span>
+<a id="__codelineno-0-525" name="__codelineno-0-525"></a>        <span class="s2">&quot; columns that is searchable and whose snippet (see sqlite&#39;s&quot;</span>
+<a id="__codelineno-0-526" name="__codelineno-0-526"></a>        <span class="s2">&quot; snippet() function) can be highlighted.&quot;</span>
+<a id="__codelineno-0-527" name="__codelineno-0-527"></a>    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="statute-unit">Statute Unit</h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+  <div class="doc doc-contents first">
       <p class="doc doc-class-bases">
         Bases: <code><span title="statute_trees.resources.Node">Node</span></code>, <code><span title="statute_trees.resources.TreeishNode">TreeishNode</span></code></p>
 
   
-      <p>For Codification objects. Unlike a Statute which needs to be
-pre-processed, a Codification is human edited. A Codification is an
-attempt to unify disconnected Statutes into a single entity.</p>
+      <p>A Statute, as used in this application, is broadly construed. It will refer
+to any Rule imagined by rule-makers (generally legislators) "in the abstract".</p>
+<p>The rule-makers imagine an event that is likely to happen and think of ways
+to deal with such an event.</p>
+<p>For our purposes, a Statute can include the Constitution itself, rules concerning
+pleading, practice, and procedure issued by the Philippine Supreme Court, or even
+the veto message by the President.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">class</span> <span class="nc">StatuteUnit</span><span class="p">(</span><span class="n">Node</span><span class="p">,</span> <span class="n">TreeishNode</span><span class="p">):</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    A Statute, as used in this application, is broadly construed. It will refer</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    to any Rule imagined by rule-makers (generally legislators) &quot;in the abstract&quot;.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    The rule-makers imagine an event that is likely to happen and think of ways</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">    to deal with such an event.</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    For our purposes, a Statute can include the Constitution itself, rules concerning</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="sd">    pleading, practice, and procedure issued by the Philippine Supreme Court, or even</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sd">    the veto message by the President.</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">generic_mp</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        <span class="bp">cls</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>        <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]:</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>        <span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>            <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># default unit being evaluated</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>            <span class="nb">id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parent_id</span><span class="si">}{</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>            <span class="k">if</span> <span class="n">subunits</span> <span class="o">:=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># potential children</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>                <span class="n">children</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">subunits</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>  <span class="c1"># recursive</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>            <span class="k">yield</span> <span class="n">StatuteUnit</span><span class="p">(</span><span class="o">**</span><span class="n">u</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">children</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    <span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]):</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">:</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>                        <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>                    <span class="p">)</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>                <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>                    <span class="p">)</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>            <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>                <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>                    <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">content</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>                <span class="p">)</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">searchables</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>    <span class="k">def</span> <span class="nf">granularize</span><span class="p">(</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>        <span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Recursive flattening of the tree structure so that each material path</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="sd">        (with its separate item, caption, and content) can become their own row.</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>            <span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;statute_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pk</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;material_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>            <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>            <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h4 id="statute_trees.nodes_statute.StatuteUnit-functions">Functions</h4>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h5 id="statute_trees.nodes_statute.StatuteUnit.granularize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h5>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Recursive flattening of the tree structure so that each material path
+(with its separate item, caption, and content) can become their own row.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="nd">@classmethod</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="k">def</span> <span class="nf">granularize</span><span class="p">(</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>    <span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Recursive flattening of the tree structure so that each material path</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="sd">    (with its separate item, caption, and content) can become their own row.</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;statute_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pk</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;material_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>        <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>        <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>            <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div><h2 id="code-unit">Code Unit</h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+  <div class="doc doc-contents first">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="statute_trees.resources.Node">Node</span></code>, <code><span title="statute_trees.resources.TreeishNode">TreeishNode</span></code></p>
+
+  
+      <h5 id="statute_trees.nodes_codification.CodeUnit--basis">Basis</h5>
+<p>To understand a <code>CodeUnit</code>, we need to understand its containing object, i.e.
+a Codification. A Codification is a restatement of a Statute that is updated
+over time by related Decisions and other Statutes. It is a human-edited attempt
+to unify disconnected Decisions and Statutes into a single entity.</p>
+<h5 id="statute_trees.nodes_codification.CodeUnit--history">History</h5>
 <p>For instance, the <code>Family Code of the Philippines</code> is contained in
 Executive Order No. 209 (1987). However it has since been amended by
 various laws such as Republic Act No. 8533 (1998) and
-Republic Act No. 10572 (2013) among others.</p>
-<p>In light of the need to record a history, each Codification may
+Republic Act No. 10572 (2013) among others. In light of the need to record
+a history, each Codification may
 contain a <code>history</code> field.</p>
 
 
         <details class="quote">
           <summary>Source code in <code>statute_trees/nodes_codification.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-23">23</a></span>
+          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
 <span class="normal"><a href="#__codelineno-0-24">24</a></span>
 <span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
@@ -801,183 +1342,80 @@ contain a <code>history</code> field.</p>
 <span class="normal"><a href="#__codelineno-0-82">82</a></span>
 <span class="normal"><a href="#__codelineno-0-83">83</a></span>
 <span class="normal"><a href="#__codelineno-0-84">84</a></span>
-<span class="normal"><a href="#__codelineno-0-85">85</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">class</span> <span class="nc">CodeUnit</span><span class="p">(</span><span class="n">Node</span><span class="p">,</span> <span class="n">TreeishNode</span><span class="p">):</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;For Codification objects. Unlike a Statute which needs to be</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="sd">    pre-processed, a Codification is human edited. A Codification is an</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="sd">    attempt to unify disconnected Statutes into a single entity.</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="sd">    For instance, the `Family Code of the Philippines` is contained in</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">    Executive Order No. 209 (1987). However it has since been amended by</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="sd">    various laws such as Republic Act No. 8533 (1998) and</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">    Republic Act No. 10572 (2013) among others.</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    In light of the need to record a history, each Codification may</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    contain a `history` field.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a>    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">generic_mp</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a>    <span class="n">history</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">CitationAffector</span> <span class="o">|</span> <span class="n">StatuteAffector</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a>        <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a>        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Unit History&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a>        <span class="n">description</span><span class="o">=</span><span class="p">(</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>            <span class="s2">&quot;Used in Codifications to show each statute or citation affecting&quot;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>            <span class="s2">&quot; the unit.&quot;</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>        <span class="p">),</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>    <span class="p">)</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a>    <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a>    <span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a>        <span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]:</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>        <span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a>            <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># default unit being evaluated</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a>            <span class="nb">id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parent_id</span><span class="si">}{</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a>            <span class="n">history</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;history&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>            <span class="k">if</span> <span class="n">subunits</span> <span class="o">:=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># potential children</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>                <span class="n">children</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">subunits</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>  <span class="c1"># recursive</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>            <span class="k">yield</span> <span class="n">CodeUnit</span><span class="p">(</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a>                <span class="o">**</span><span class="n">u</span><span class="p">,</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a>                <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a>                <span class="n">history</span><span class="o">=</span><span class="n">history</span><span class="p">,</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a>                <span class="n">units</span><span class="o">=</span><span class="n">children</span><span class="p">,</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a>            <span class="p">)</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a>    <span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]):</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a>        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">:</span>
-<a id="__codelineno-0-68" name="__codelineno-0-68"></a>                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-<a id="__codelineno-0-69" name="__codelineno-0-69"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-70" name="__codelineno-0-70"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a>                        <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73"></a>                    <span class="p">)</span>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a>                <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a>                        <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">,</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a>                    <span class="p">)</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a>            <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a>                <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-82" name="__codelineno-0-82"></a>                    <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">content</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a>                <span class="p">)</span>
-<a id="__codelineno-0-84" name="__codelineno-0-84"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">searchables</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
-
-
-  </div>
-
-  </div>
-
-</div><h2 id="statute">Statute</h2>
-
-
-<div class="doc doc-object doc-module">
-
-
-
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-<h2 id="statute_trees.nodes_statute-classes">Classes</h2>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="statute_trees.nodes_statute.StatutePage" class="doc doc-heading">
-        <code>StatutePage</code>
-
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="statute_trees.resources.Page">Page</span></code>, <code><span title="statute_trees.resources.StatuteBase">StatuteBase</span></code></p>
-
-
-
-        <details class="quote">
-          <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-70">70</a></span>
-<span class="normal"><a href="#__codelineno-0-71">71</a></span>
-<span class="normal"><a href="#__codelineno-0-72">72</a></span>
-<span class="normal"><a href="#__codelineno-0-73">73</a></span>
-<span class="normal"><a href="#__codelineno-0-74">74</a></span>
-<span class="normal"><a href="#__codelineno-0-75">75</a></span>
-<span class="normal"><a href="#__codelineno-0-76">76</a></span>
-<span class="normal"><a href="#__codelineno-0-77">77</a></span>
-<span class="normal"><a href="#__codelineno-0-78">78</a></span>
-<span class="normal"><a href="#__codelineno-0-79">79</a></span>
-<span class="normal"><a href="#__codelineno-0-80">80</a></span>
-<span class="normal"><a href="#__codelineno-0-81">81</a></span>
-<span class="normal"><a href="#__codelineno-0-82">82</a></span>
-<span class="normal"><a href="#__codelineno-0-83">83</a></span>
-<span class="normal"><a href="#__codelineno-0-84">84</a></span>
 <span class="normal"><a href="#__codelineno-0-85">85</a></span>
 <span class="normal"><a href="#__codelineno-0-86">86</a></span>
 <span class="normal"><a href="#__codelineno-0-87">87</a></span>
 <span class="normal"><a href="#__codelineno-0-88">88</a></span>
 <span class="normal"><a href="#__codelineno-0-89">89</a></span>
-<span class="normal"><a href="#__codelineno-0-90">90</a></span>
-<span class="normal"><a href="#__codelineno-0-91">91</a></span>
-<span class="normal"><a href="#__codelineno-0-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="k">class</span> <span class="nc">StatutePage</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">StatuteBase</span><span class="p">):</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a>    <span class="n">titles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StatuteTitle</span><span class="p">]</span>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="n">tree</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StatuteUnit</span><span class="p">]</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73"></a>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">details_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Most of the pre-processing of statute fields is done by</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="sd">        `Rules.get_details()`&quot;&quot;&quot;</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a>        <span class="n">details</span> <span class="o">=</span> <span class="n">Rule</span><span class="o">.</span><span class="n">get_details</span><span class="p">(</span><span class="n">details_path</span><span class="p">)</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">details</span><span class="p">:</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a>            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No details from rule.&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a>        <span class="n">base</span> <span class="o">=</span> <span class="n">StatuteBase</span><span class="o">.</span><span class="n">from_rule</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">rule</span><span class="p">)</span>
-<a id="__codelineno-0-82" name="__codelineno-0-82"></a>        <span class="n">tree</span> <span class="o">=</span> <span class="n">StatuteUnit</span><span class="p">(</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a>            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1.&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-84" name="__codelineno-0-84"></a>            <span class="n">item</span><span class="o">=</span><span class="n">details</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a>            <span class="n">units</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">StatuteUnit</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">units</span><span class="p">)),</span>
-<a id="__codelineno-0-86" name="__codelineno-0-86"></a>        <span class="p">)</span>
-<a id="__codelineno-0-87" name="__codelineno-0-87"></a>        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
-<a id="__codelineno-0-88" name="__codelineno-0-88"></a>            <span class="o">**</span><span class="n">details</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="s2">&quot;rule&quot;</span><span class="p">}),</span>
-<a id="__codelineno-0-89" name="__codelineno-0-89"></a>            <span class="o">**</span><span class="n">base</span><span class="o">.</span><span class="n">dict</span><span class="p">(),</span>
-<a id="__codelineno-0-90" name="__codelineno-0-90"></a>            <span class="n">tree</span><span class="o">=</span><span class="p">[</span><span class="n">tree</span><span class="p">],</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a>            <span class="n">units</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude_none</span><span class="o">=</span><span class="kc">True</span><span class="p">)]),</span>
-<a id="__codelineno-0-92" name="__codelineno-0-92"></a>        <span class="p">)</span>
+<span class="normal"><a href="#__codelineno-0-90">90</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">class</span> <span class="nc">CodeUnit</span><span class="p">(</span><span class="n">Node</span><span class="p">,</span> <span class="n">TreeishNode</span><span class="p">):</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="sd">    ## Basis</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="sd">    To understand a `CodeUnit`, we need to understand its containing object, i.e.</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="sd">    a Codification. A Codification is a restatement of a Statute that is updated</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="sd">    over time by related Decisions and other Statutes. It is a human-edited attempt</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">    to unify disconnected Decisions and Statutes into a single entity.</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">    ## History</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    For instance, the `Family Code of the Philippines` is contained in</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    Executive Order No. 209 (1987). However it has since been amended by</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">    various laws such as Republic Act No. 8533 (1998) and</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">    Republic Act No. 10572 (2013) among others. In light of the need to record</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    a history, each Codification may</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="sd">    contain a `history` field.</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">generic_mp</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    <span class="n">history</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">CitationAffector</span> <span class="o">|</span> <span class="n">StatuteAffector</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>        <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Unit History&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>        <span class="n">description</span><span class="o">=</span><span class="p">(</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>            <span class="s2">&quot;Used in Codifications to show each statute or citation affecting&quot;</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>            <span class="s2">&quot; the unit.&quot;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>        <span class="p">),</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>    <span class="p">)</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>    <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>    <span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>        <span class="bp">cls</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]:</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>        <span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>            <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># default unit being evaluated</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>            <span class="nb">id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parent_id</span><span class="si">}{</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>            <span class="n">history</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;history&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>            <span class="k">if</span> <span class="n">subunits</span> <span class="o">:=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># potential children</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>                <span class="n">children</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">subunits</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>  <span class="c1"># recursive</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>            <span class="k">yield</span> <span class="n">CodeUnit</span><span class="p">(</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>                <span class="o">**</span><span class="n">u</span><span class="p">,</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>                <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>                <span class="n">history</span><span class="o">=</span><span class="n">history</span><span class="p">,</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>                <span class="n">units</span><span class="o">=</span><span class="n">children</span><span class="p">,</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>            <span class="p">)</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>    <span class="nd">@classmethod</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a>    <span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;CodeUnit&quot;</span><span class="p">]):</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">:</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>                        <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>                    <span class="p">)</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>                <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>                        <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">,</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a>                    <span class="p">)</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>            <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>                <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a>                    <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">codification_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">content</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>                <span class="p">)</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">searchables</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -991,71 +1429,7 @@ contain a <code>history</code> field.</p>
 
 
 
-<h4 id="statute_trees.nodes_statute.StatutePage-functions">Functions</h4>
 
-<div class="doc doc-object doc-function">
-
-
-
-<h5 id="statute_trees.nodes_statute.StatutePage.build" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">build</span><span class="p">(</span><span class="n">details_path</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
-  </span>
-
-</h5>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Most of the pre-processing of statute fields is done by
-<code>Rules.get_details()</code></p>
-
-      <details class="quote">
-        <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-74">74</a></span>
-<span class="normal"><a href="#__codelineno-0-75">75</a></span>
-<span class="normal"><a href="#__codelineno-0-76">76</a></span>
-<span class="normal"><a href="#__codelineno-0-77">77</a></span>
-<span class="normal"><a href="#__codelineno-0-78">78</a></span>
-<span class="normal"><a href="#__codelineno-0-79">79</a></span>
-<span class="normal"><a href="#__codelineno-0-80">80</a></span>
-<span class="normal"><a href="#__codelineno-0-81">81</a></span>
-<span class="normal"><a href="#__codelineno-0-82">82</a></span>
-<span class="normal"><a href="#__codelineno-0-83">83</a></span>
-<span class="normal"><a href="#__codelineno-0-84">84</a></span>
-<span class="normal"><a href="#__codelineno-0-85">85</a></span>
-<span class="normal"><a href="#__codelineno-0-86">86</a></span>
-<span class="normal"><a href="#__codelineno-0-87">87</a></span>
-<span class="normal"><a href="#__codelineno-0-88">88</a></span>
-<span class="normal"><a href="#__codelineno-0-89">89</a></span>
-<span class="normal"><a href="#__codelineno-0-90">90</a></span>
-<span class="normal"><a href="#__codelineno-0-91">91</a></span>
-<span class="normal"><a href="#__codelineno-0-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">details_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Most of the pre-processing of statute fields is done by</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="sd">    `Rules.get_details()`&quot;&quot;&quot;</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a>    <span class="n">details</span> <span class="o">=</span> <span class="n">Rule</span><span class="o">.</span><span class="n">get_details</span><span class="p">(</span><span class="n">details_path</span><span class="p">)</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">details</span><span class="p">:</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a>        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No details from rule.&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a>    <span class="n">base</span> <span class="o">=</span> <span class="n">StatuteBase</span><span class="o">.</span><span class="n">from_rule</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">rule</span><span class="p">)</span>
-<a id="__codelineno-0-82" name="__codelineno-0-82"></a>    <span class="n">tree</span> <span class="o">=</span> <span class="n">StatuteUnit</span><span class="p">(</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a>        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1.&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-84" name="__codelineno-0-84"></a>        <span class="n">item</span><span class="o">=</span><span class="n">details</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a>        <span class="n">units</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">StatuteUnit</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">units</span><span class="p">)),</span>
-<a id="__codelineno-0-86" name="__codelineno-0-86"></a>    <span class="p">)</span>
-<a id="__codelineno-0-87" name="__codelineno-0-87"></a>    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
-<a id="__codelineno-0-88" name="__codelineno-0-88"></a>        <span class="o">**</span><span class="n">details</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="s2">&quot;rule&quot;</span><span class="p">}),</span>
-<a id="__codelineno-0-89" name="__codelineno-0-89"></a>        <span class="o">**</span><span class="n">base</span><span class="o">.</span><span class="n">dict</span><span class="p">(),</span>
-<a id="__codelineno-0-90" name="__codelineno-0-90"></a>        <span class="n">tree</span><span class="o">=</span><span class="p">[</span><span class="n">tree</span><span class="p">],</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a>        <span class="n">units</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude_none</span><span class="o">=</span><span class="kc">True</span><span class="p">)]),</span>
-<a id="__codelineno-0-92" name="__codelineno-0-92"></a>    <span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
-  </div>
-
-</div>
 
 
 
@@ -1063,260 +1437,14 @@ contain a <code>history</code> field.</p>
 
   </div>
 
-</div>
+</div><h2 id="doc-unit">Doc Unit</h2>
+
 
 <div class="doc doc-object doc-class">
-
-
-
-<h3 id="statute_trees.nodes_statute.StatuteUnit" class="doc doc-heading">
-        <code>StatuteUnit</code>
-
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="statute_trees.resources.Node">Node</span></code>, <code><span title="statute_trees.resources.TreeishNode">TreeishNode</span></code></p>
-
-  
-      <p>Non-table, interim unit for Statute objects. The <code>short_title</code> is
-used as a special field to look for the statute's title within
-the provisions.</p>
-
-
-        <details class="quote">
-          <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span>
-<span class="normal"><a href="#__codelineno-0-65">65</a></span>
-<span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">class</span> <span class="nc">StatuteUnit</span><span class="p">(</span><span class="n">Node</span><span class="p">,</span> <span class="n">TreeishNode</span><span class="p">):</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Non-table, interim unit for Statute objects. The `short_title` is</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    used as a special field to look for the statute&#39;s title within</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    the provisions.</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">generic_mp</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="k">def</span> <span class="nf">create_branches</span><span class="p">(</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="bp">cls</span><span class="p">,</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="n">parent_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]:</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>        <span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>            <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># default unit being evaluated</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a>            <span class="nb">id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parent_id</span><span class="si">}{</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>            <span class="k">if</span> <span class="n">subunits</span> <span class="o">:=</span> <span class="n">u</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># potential children</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>                <span class="n">children</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">create_branches</span><span class="p">(</span><span class="n">subunits</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>  <span class="c1"># recursive</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a>            <span class="k">yield</span> <span class="n">StatuteUnit</span><span class="p">(</span><span class="o">**</span><span class="n">u</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">children</span><span class="p">)</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>    <span class="k">def</span> <span class="nf">searchables</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]):</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a>        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="p">:</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a>                <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a>                        <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a>                        <span class="n">unit_text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>                    <span class="p">)</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>                <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>                    <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a>                        <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">caption</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a>                    <span class="p">)</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a>            <span class="k">elif</span> <span class="n">u</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a>                <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a>                    <span class="n">material_path</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">statute_id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">unit_text</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">content</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a>                <span class="p">)</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>            <span class="k">if</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">searchables</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>    <span class="k">def</span> <span class="nf">granularize</span><span class="p">(</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>        <span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Recursive flattening of the tree structure so that each material path</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">        (with its separate item, caption, and content) can become their own row.</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a>            <span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a>            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;statute_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pk</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a>            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;material_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a>            <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a>            <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a>                <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<h4 id="statute_trees.nodes_statute.StatuteUnit-functions">Functions</h4>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h5 id="statute_trees.nodes_statute.StatuteUnit.granularize" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
-  </span>
-
-</h5>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Recursive flattening of the tree structure so that each material path
-(with its separate item, caption, and content) can become their own row.</p>
-
-      <details class="quote">
-        <summary>Source code in <code>statute_trees/nodes_statute.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span>
-<span class="normal"><a href="#__codelineno-0-65">65</a></span>
-<span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="k">def</span> <span class="nf">granularize</span><span class="p">(</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>    <span class="bp">cls</span><span class="p">,</span> <span class="n">pk</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;StatuteUnit&quot;</span><span class="p">]</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Recursive flattening of the tree structure so that each material path</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">    (with its separate item, caption, and content) can become their own row.</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a>        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;statute_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pk</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a>        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;material_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a>        <span class="k">yield</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a>        <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">:</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a>            <span class="k">yield from</span> <span class="bp">cls</span><span class="o">.</span><span class="n">granularize</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
-
-
-  </div>
-
-  </div>
-
-</div><h2 id="document">Document</h2>
-
-
-<div class="doc doc-object doc-module">
 
 
 
   <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-<h2 id="statute_trees.nodes_document-classes">Classes</h2>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="statute_trees.nodes_document.DocUnit" class="doc doc-heading">
-        <code>DocUnit</code>
-
-
-</h3>
-
-
-  <div class="doc doc-contents ">
       <p class="doc doc-class-bases">
         Bases: <code><span title="statute_trees.resources.Node">Node</span></code>, <code><span title="statute_trees.resources.TreeishNode">TreeishNode</span></code></p>
 
@@ -1449,17 +1577,6 @@ the provisions.</p>
 
 
 
-  </div>
-
-  </div>
-
-</div>
-
-
-
-  
-
-
 
                 
               </article>
@@ -1476,10 +1593,24 @@ the provisions.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; Marcelino Veloso III
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/justmars" target="_blank" rel="noopener" title="justmars on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -1493,7 +1624,7 @@ the provisions.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
