@@ -7,7 +7,9 @@ from statute_trees.utils import Layers
 def itemless_data() -> list[dict]:
     return [
         {
-            "item": "Part I",  # should be ignored; second level should start with I.
+            "item": (
+                "Part I"
+            ),  # should be ignored; second level should start with I.
             "units": [
                 {
                     "caption": "Effect and Application of Laws",

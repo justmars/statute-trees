@@ -1,8 +1,8 @@
 site_name: Statute Trees Docs
 site_description: Tree-based Philippine Codifications, Statutes, and Documents, using a uniform node structure (i.e., leaves of a tree) identified by a given material path.
-repo_url: https://github.com/justmars/statute-trees
 site_url: https://lawsql.com
 site_author: Marcelino Veloso III
+repo_url: https://github.com/justmars/statute-trees
 theme:
   name: "material"
   palette:
@@ -23,10 +23,14 @@ nav:
   - Trees: trees.md
   - Utils: utils.md
 extra:
+  homepage: https://mv3.dev
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/justmars
       name: justmars on Github
+    - icon: fontawesome/brands/mastodon
+      link: https://esq.social/@mv
+      name: mv on Mastodon
 copyright: Copyright &copy; Marcelino Veloso III
 plugins:
   - autorefs
