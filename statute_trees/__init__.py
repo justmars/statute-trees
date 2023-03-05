@@ -1,4 +1,4 @@
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .nodes_codification import CodePage, CodeUnit
 from .nodes_document import DocPage, DocUnit
