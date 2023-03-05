@@ -19,8 +19,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-citation-utils = "^0.2.3"
-statute-patterns = "^0.2.0"
+citation-utils = "^0.2.4"
+statute-patterns = "^0.2.1"
 
 [tool.poetry.group.dev.dependencies]
 rich = "^13.3"
@@ -35,6 +35,7 @@ types-python-dateutil = "^2.8.19.2"
 mkdocs = "^1.4.2"
 mkdocstrings = { extras = ["python"], version = "^0.20.0" }
 mkdocs-material = "^9.1.0"
+ipython = "^8.11.0"
 
 [tool.pytest]
 minversion = "7.2"
