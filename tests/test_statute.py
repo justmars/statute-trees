@@ -18,7 +18,6 @@ def statute_units() -> list[StatuteUnit]:
             caption="General Provisions.",
             content=None,
             id="1.1.",
-            short_title=None,
             units=[
                 StatuteUnit(
                     item="Section 1",
@@ -35,7 +34,6 @@ def statute_units() -> list[StatuteUnit]:
                         " delay."
                     ),
                     id="1.1.1.",
-                    short_title=None,
                     units=[],
                 ),
                 StatuteUnit(
@@ -52,7 +50,6 @@ def statute_units() -> list[StatuteUnit]:
                         " of record."
                     ),
                     id="1.1.2.",
-                    short_title=None,
                     units=[],
                 ),
             ],

@@ -17,6 +17,14 @@ def test_id(raw_const: StatutePage):
     assert raw_const.id == "const-1987-october-15-1986"
 
 
+def test_storage_prefix(raw_const: StatutePage):
+    assert raw_const.storage_prefix == "const/1986/10/1987/1"
+
+
+def test_prefix_slug(raw_const: StatutePage):
+    assert raw_const.prefix_db_key == "const.1986.10.1987.1"
+
+
 def test_raw_statute_base(raw_const: StatutePage):
     assert raw_const.statute_category == "const"
     assert raw_const.statute_serial_id == "1987"

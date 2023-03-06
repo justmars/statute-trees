@@ -78,10 +78,49 @@ class StatutePage(Page, StatuteBase):
     titles: list[StatuteTitle]
     tree: list[StatuteUnit]
 
+    def join_elements(self, separator: str) -> str | None:
+        if not self.variant:
+            return None
+        if not self.statute_category:
+            return None
+        if not self.statute_serial_id:
+            return None
+        if separator not in ("/", "."):
+            return None
+        if "." in self.statute_serial_id:
+            return None
+        return separator.join(
+            str(i).lower()
+            for i in [
+                self.statute_category,
+                self.date.year,
+                self.date.month,
+                self.statute_serial_id,
+                self.variant,
+            ]
+        )
+
+    @property
+    def storage_prefix(self) -> str | None:
+        """Create unique identifier from fields only for use as a
+        remote storage prefix. Note parity with `citation_utils.Citation`.
+        """
+        return self.join_elements(separator="/")
+
+    @property
+    def prefix_db_key(self) -> str | None:
+        """When identifying the statute in the database, need a way
+        to combine fields which can be reverted to storage prefix form
+        later. Note parity with `citation_utils.Citation`."""
+        return self.join_elements(separator=".")
+
     @classmethod
     def build(cls, details_path: Path):
         """Most of the pre-processing of statute fields is done by
-        `Rules.get_details()`"""
+        `Rules.get_details()` Assuming the .yaml file contains a variant field,
+        it will populate the Page variant; otherwise `Rule.get_details` creates
+        a default `1`.
+        """
         details = Rule.get_details(details_path)
         if not details:
             raise Exception("No details from rule.")

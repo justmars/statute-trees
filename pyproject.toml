@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "statute-trees"
-version = "0.1.1"
+version = "0.1.2"
 description = "Tree-based Philippine Codifications, Statutes, and Documents, using a uniform node structure (i.e., leaves of a tree) identified by a given material path."
 authors = ["Marcelino G. Veloso III <mars@veloso.one>"]
 readme = "README.md"
@@ -19,8 +19,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-citation-utils = "^0.2.4"
-statute-patterns = "^0.2.1"
+citation-utils = "^0.2.6"
+statute-patterns = "^0.2.2"
 
 [tool.poetry.group.dev.dependencies]
 rich = "^13.3"
@@ -37,9 +37,9 @@ mkdocstrings = { extras = ["python"], version = "^0.20.0" }
 mkdocs-material = "^9.1.0"
 ipython = "^8.11.0"
 
-[tool.pytest]
+[tool.pytest.ini_options]
 minversion = "7.2"
-addopts = "-ra -q --cov=tests/"
+addopts = "--doctest-modules"
 testpaths = ["tests"]
 
 [tool.ruff]
