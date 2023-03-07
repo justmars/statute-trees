@@ -1,8 +1,8 @@
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 from .nodes_codification import CodePage, CodeUnit
 from .nodes_document import DocPage, DocUnit
-from .nodes_statute import StatutePage, StatuteUnit
+from .nodes_statute import MentionedStatute, StatutePage, StatuteUnit
 from .resources import (
     CitationAffector,
     EventCitation,
